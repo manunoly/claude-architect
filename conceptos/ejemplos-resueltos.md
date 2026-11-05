@@ -215,11 +215,11 @@ En la práctica 04, solo claims tiene procedencia por fuente. facts contiene exc
 
 Tareas 1.6, 2.5 y 3.4. Sesión 7.
 
-Supuesto: no hay grafo disponible. Glob encuentra `**/*.test.ts`, Grep localiza `refundCustomer`, Read permite seguir la implementación y sus imports. Si un módulo exporta ese símbolo también como `issueCredit`, buscar solo el primer nombre no encuentra todos los consumidores. Registrar aliases y seguirlos antes de concluir alcance.
+Glob encuentra `**/*.test.ts`, Grep localiza `refundCustomer`, Read permite seguir la implementación y sus imports. Si un módulo exporta ese símbolo también como `issueCredit`, buscar solo el primer nombre no encuentra todos los consumidores. Registrar aliases y seguirlos antes de concluir alcance.
 
 Ejemplo de wrapper: `billing.ts` exporta `refundCustomer`; `index.ts` contiene `export { refundCustomer as issueCredit } from './billing'`; `app.ts` importa `issueCredit`. Buscar solo `refundCustomer` encuentra la definición y el wrapper, pero no necesariamente el uso final. La segunda búsqueda sigue `issueCredit` y la lectura comprueba que es el mismo flujo.
 
-Bash o PowerShell ejecuta un comando de comprobación conocido; no se elige para todo si existe una herramienta de lectura más precisa. Edit necesita un ancla inequívoca; si cambia el archivo, volver a leer antes de sustituir. Write no autoriza a perder cambios ajenos. En este proyecto, AGENTS.md exige preferir el grafo cuando exista; ese contrato se mantiene.
+Bash o PowerShell ejecuta un comando de comprobación conocido; no se elige para todo si existe una herramienta de lectura más precisa. Edit necesita un ancla inequívoca; si cambia el archivo, volver a leer antes de sustituir. Write no autoriza a perder cambios ajenos.
 
 Una revisión resuelta puede tener dos pasadas: analizar cada archivo modificado contra sus requisitos y después seguir el dato desde `parseAmount` hasta `chargeCustomer`. Que ambos archivos pasen pruebas aisladas no demuestra que concuerden sobre céntimos y euros. Una migración de pocas líneas puede requerir planificación si cambia ese contrato; el conteo de líneas no decide por sí solo.
 

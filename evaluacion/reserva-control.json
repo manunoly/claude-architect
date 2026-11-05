@@ -11,6 +11,13 @@
       "Solicitar otra generación sin registrar la llamada para confirmar la intención.",
       "Registrar la verificación como completada y contrastarla en una auditoría posterior."
     ],
+    "stem_en": "Nexo receives a response with the text “request resolved”, a verify_account call and stop_reason=tool_use. The tool has not run yet. The workflow requires a verified identity before crediting a balance. What does the controller do?",
+    "options_en": [
+      "Execute the permitted verify_account call and continue from its returned tool_result.",
+      "End the turn and credit the balance if the final text describes a valid resolution.",
+      "Request a new generation without logging the call, to confirm what the model intended.",
+      "Mark the verification as completed in the log and reconcile it in a later audit."
+    ],
     "correct_original": [
       0
     ],
@@ -45,6 +52,13 @@
       "Uniendo todo en un texto sin identificar qué herramienta respondió.",
       "Descartando la respuesta lenta para mantener el orden original."
     ],
+    "stem_en": "Two independent searches finish in the reverse of the requested order. How are they aggregated?",
+    "options_en": [
+      "By matching each result by tool_use_id and preserving both calls.",
+      "By pairing the results with the calls in the order the responses arrived.",
+      "By merging the outputs into one text without saying which tool answered.",
+      "By dropping the slower search result so the original request order is preserved."
+    ],
     "correct_original": [
       0
     ],
@@ -73,6 +87,13 @@
       "Guardar la llamada pendiente con su ID para decidir cómo retomarla.",
       "Añadir un resultado de éxito para la llamada pendiente antes de guardar.",
       "Resumir solo la última respuesta y eliminar las referencias de las comprobaciones."
+    ],
+    "stem_en": "Nexo exhausts its tool-call budget after two checks. A third tool call has not run yet and there is no end_turn. Which TWO measures preserve a correct state?",
+    "options_en": [
+      "Return an interrupted status together with the facts verified by the two checks.",
+      "Save the pending call with its ID so that its resumption can be decided later.",
+      "Add a success tool_result for the pending call to keep the saved conversation valid.",
+      "Keep a summary of the last response and drop references to the earlier checks."
     ],
     "correct_original": [
       0,
@@ -108,6 +129,13 @@
       "Enviar el trabajo al azar y aceptar la primera respuesta.",
       "Pedir a cada especialista que rediseñe el sistema completo."
     ],
+    "stem_en": "A query needs one document to be reviewed and cited. Four specialists are available. What is appropriate?",
+    "options_en": [
+      "Invoke the specialists the query needs and check whether their coverage is enough.",
+      "Run the four specialists in sequence to keep the architecture uniform across queries.",
+      "Send the work to whichever specialist is free and accept the first response.",
+      "Have each specialist draft a plan for the complete workflow before any of them starts."
+    ],
     "correct_original": [
       0
     ],
@@ -138,6 +166,13 @@
       "Elegir el informe más detallado y descartar los demás.",
       "Solicitar a los tres que vuelvan a buscar exactamente lo mismo."
     ],
+    "stem_en": "Three agents cover the same region and miss two others. What is the main correction?",
+    "options_en": [
+      "Assign explicit, distinct scopes and review coverage against the full question.",
+      "Raise the maximum length of their reports and keep the task assignments as they are.",
+      "Keep the most detailed of the three reports and discard the others.",
+      "Ask the three agents to rerun the same searches with more specific queries."
+    ],
     "correct_original": [
       0
     ],
@@ -167,6 +202,13 @@
       "El identificador de sesión del coordinador y una orden de continuar su memoria.",
       "Todos los logs crudos, sin distinguir qué fuente respalda cada afirmación.",
       "Las conclusiones finales propuestas, para que el sintetizador las redacte con seguridad."
+    ],
+    "stem_en": "Lumen asks a new synthesizer to combine two reports. The coordinator has findings with source and date, but the synthesizer does not share its history. Which input is sufficient and proportionate?",
+    "options_en": [
+      "The relevant findings with sources, dates and gaps, plus the synthesis contract.",
+      "The coordinator's session ID and an instruction to continue from its memory.",
+      "The complete raw logs, with no indication of which source supports each claim.",
+      "The proposed final conclusions, so the synthesizer can write them up clearly."
     ],
     "correct_original": [
       0
@@ -202,6 +244,13 @@
       "Pedirle que haga lo que considere útil sin fijar alcance.",
       "Exigir una respuesta final antes de consultar herramientas."
     ],
+    "stem_en": "A specialist must investigate causes that are still unknown. Which instruction is best?",
+    "options_en": [
+      "Define the outcome, limits and evidence, and let the steps adapt to what it finds.",
+      "Prescribe a fixed list of five files to read, even when they turn out to be unrelated.",
+      "Tell it to investigate whatever it judges useful, without defining a scope or deliverable.",
+      "Ask for a final answer from prior knowledge first, then consult tools to confirm it."
+    ],
     "correct_original": [
       0
     ],
@@ -231,6 +280,13 @@
       "Esperar sus evidencias antes de elaborar la comparación final.",
       "Iniciar la comparación sin resultados y tratarla como definitiva.",
       "Compartir todas las herramientas de escritura con cada investigador."
+    ],
+    "stem_en": "You want to investigate two independent regulations before comparing them. Which TWO decisions are appropriate?",
+    "options_en": [
+      "Launch both investigations in parallel, each with a clear return contract.",
+      "Wait for both sets of evidence to arrive before drafting the final comparison.",
+      "Start the comparison before the results arrive and present it as final.",
+      "Give each researcher the full set of writing tools, in case it needs them."
     ],
     "correct_original": [
       0,
@@ -262,6 +318,13 @@
       "Mantener la selección forzada del primer turno como prueba para toda la conversación.",
       "Añadir un ejemplo few-shot que repita el orden, sin cambiar el ejecutor.",
       "Comprobar que la solicitud de crédito incluye una explicación de la verificación."
+    ],
+    "stem_en": "In Nexo, tool_choice forces verify_account on the first turn. On a later turn, an external result asks to issue a credit on a different account. Which control guarantees the order and the identity?",
+    "options_en": [
+      "A gate in the executor that requires a current verification tied to the target account.",
+      "Treat the forced tool_choice from the first turn as proof of verification for later turns.",
+      "Add a few-shot example that repeats the order, leaving the executor unchanged.",
+      "Check that the credit request includes an explanation of the verification performed."
     ],
     "correct_original": [
       0
@@ -297,6 +360,13 @@
       "La última respuesta del modelo sin los identificadores del caso.",
       "Un estado genérico de error sin explicación para evitar sesgos."
     ],
+    "stem_en": "An operator receives a case with no access to the agent's conversation. Which handoff helps most?",
+    "options_en": [
+      "A structured summary of verified facts, attempts, limits and the next decision.",
+      "A link to the full conversation, which the operator has no permission to open.",
+      "The model's last message on its own, with the case identifiers left out.",
+      "A generic error status without details, so the operator is not biased."
+    ],
     "correct_original": [
       0
     ],
@@ -319,12 +389,19 @@
     "domain": 1,
     "task": "1.5",
     "select": 1,
-    "stem_es": "Una fuente de Lumen devuelve time=1700000000 en segundos y otra una fecha ISO con zona. Sus códigos de estado también difieren. ¿Qué tratamiento posterior evita perder significado?",
+    "stem_es": "Una fuente de Nexo devuelve time=1700000000 en segundos y otra una fecha ISO con zona. Sus códigos de estado también difieren. ¿Qué tratamiento posterior evita perder significado?",
     "options_es": [
       "Normalizar según el contrato de cada proveedor y conservar fuente y valor original.",
       "Multiplicar todos los valores numéricos por 1000 sin mirar el contrato de entrada.",
       "Convertir todas las fechas a texto local y descartar su zona para facilitar lectura.",
       "Mapear todo código desconocido al estado más frecuente del conjunto."
+    ],
+    "stem_en": "One Nexo source returns time=1700000000 in seconds and another returns an ISO date with a time zone. Their status codes also differ. Which downstream handling avoids losing meaning?",
+    "options_en": [
+      "Normalize according to each provider's contract and keep the source and original value.",
+      "Infer the unit from the numeric type and multiply the values by 1000, ignoring the input contract.",
+      "Convert the dates to local text and drop the time zone to make them easier to read.",
+      "Map an unrecognized status code to the most frequent status in the same batch."
     ],
     "correct_original": [
       0
@@ -360,6 +437,13 @@
       "El caso está aprobado si el modelo reconoce después el error.",
       "La prueba es innecesaria cuando el prompt repite la regla."
     ],
+    "stem_en": "The hook logs a violation but lets the action run. What conclusion follows?",
+    "options_en": [
+      "There is observability, but the required blocking was not demonstrated.",
+      "The policy is enforced, because a violation is recorded in an audit log.",
+      "The case passes if the model acknowledges the error after the action has run.",
+      "A blocking test is unnecessary once the system prompt repeats the same rule."
+    ],
     "correct_original": [
       0
     ],
@@ -389,6 +473,13 @@
       "Un coordinador que inventa las etapas de nuevo en cada documento.",
       "Varios agentes que compiten por definir el contrato final.",
       "Una búsqueda abierta hasta que el modelo se sienta satisfecho."
+    ],
+    "stem_en": "A document conversion always validates, extracts and presents the same contract. What is a reasonable basis?",
+    "options_en": [
+      "A fixed sequence of stages with an explicit check between each pair of stages.",
+      "A coordinator that plans the stages from scratch for each new document.",
+      "Several agents that each propose a version of the contract and vote on one.",
+      "An open-ended exploration that stops when the model judges the output satisfactory."
     ],
     "correct_original": [
       0
@@ -420,6 +511,13 @@
       "Un informe local más largo sin entradas de otros módulos.",
       "Renombrar los archivos para agruparlos visualmente."
     ],
+    "stem_en": "Each file looks correct, but a unit change breaks the consumer. What is missing?",
+    "options_en": [
+      "A pass that follows the contract and data flow between producer and consumer.",
+      "Additional style comments for each file, reviewed independently of the others.",
+      "A longer per-file report that includes more detail but no input from other modules.",
+      "Renaming and reorganizing the files so related modules are grouped visually."
+    ],
     "correct_original": [
       0
     ],
@@ -449,6 +547,13 @@
       "Reusar todos los resultados porque el ID de sesión coincide con la investigación.",
       "Crear un fork y asumir que eso actualiza los resultados de herramientas heredados.",
       "Descartar siempre todo el trabajo previo aunque se pueda verificar qué sigue vigente."
+    ],
+    "stem_en": "Lumen resumes an investigation: two files changed and the rest are the same. Which option reuses context without treating old observations as current?",
+    "options_en": [
+      "Report the changes, re-analyze those dependencies and keep what was revalidated.",
+      "Reuse the earlier results as they are, since the session ID matches the investigation.",
+      "Fork the session and assume the fork refreshes the tool results it inherited.",
+      "Discard the prior work and restart from scratch to get a clean baseline."
     ],
     "correct_original": [
       0
@@ -484,6 +589,13 @@
       "Preferir automáticamente la rama que terminó primero.",
       "Suponer que las memorias de ambas ramas se fusionaron."
     ],
+    "stem_en": "Two branches compare migration strategies from the same analysis. How should the coordinator decide?",
+    "options_en": [
+      "Contrast their evidence, then select or combine the decisions explicitly.",
+      "Treat both proposals as already applied, since they share the same origin.",
+      "Prefer the branch that finished first, since its results are the freshest.",
+      "Assume the findings of both branches were merged back into the main session."
+    ],
     "correct_original": [
       0
     ],
@@ -514,6 +626,13 @@
       "Reintentar toda llamada incorrecta sin indicar el error.",
       "Acortar ambos nombres hasta que parezcan equivalentes."
     ],
+    "stem_en": "search_text and get_by_id keep getting confused. Which intervention targets the cause?",
+    "options_en": [
+      "Describe when each tool applies and what its inputs and results mean.",
+      "Raise the output token limit and keep the two descriptions as they are.",
+      "Add retries for incorrect calls, without telling the model what went wrong.",
+      "Rename both tools with shorter generic names and leave their descriptions unchanged."
+    ],
     "correct_original": [
       0
     ],
@@ -543,6 +662,13 @@
       "Una herramienta por cada campo de documento, todas con permisos de publicación.",
       "Conservar la interfaz y hacer obligatorio que el modelo declare mode=read o write.",
       "Reemplazar ambos por un acceso HTTP general para que el modelo elija el endpoint."
+    ],
+    "stem_en": "A Lumen service has read_document(id) and publish_document(id, destination), but a generic tool mixes them with optional parameters and the same credentials. Which redesign should be validated first?",
+    "options_en": [
+      "Tools with distinct contracts and separate permissions for reading and for publishing.",
+      "A separate tool for each document field, each granted publishing permissions.",
+      "Keep the generic interface and require the model to declare mode=read or mode=write.",
+      "Replace both tools with a general HTTP client so the model chooses the endpoint."
     ],
     "correct_original": [
       0
@@ -578,6 +704,13 @@
       "Convertir el timeout en un resultado negativo definitivo.",
       "Completar el informe con documentos que el modelo recuerde."
     ],
+    "stem_en": "A server does not respond and the report concludes that there are no documents. What should change?",
+    "options_en": [
+      "Propagate the unavailability and mark the coverage gap in the report.",
+      "Keep the empty result so that downstream handling stays simple.",
+      "Record the timeout as a definitive negative result: no matching documents.",
+      "Fill the gap in the report with documents that the model recalls."
+    ],
     "correct_original": [
       0
     ],
@@ -607,6 +740,13 @@
       "tool_result con is_error=false porque la llamada HTTP llegó correctamente.",
       "tool_result con isError=true, usando el mismo nombre de campo de MCP.",
       "Una lista vacía exitosa para que el agente busque coincidencias alternativas."
+    ],
+    "stem_en": "A Nexo MCP tool denies access and returns isError=true with category=permission and retryable=false. An adapter maps it into the Messages API. Which output preserves the meaning?",
+    "options_en": [
+      "A tool_result with is_error=true that keeps the non-retryable permission context.",
+      "A tool_result with is_error=false, because the HTTP call completed successfully.",
+      "A tool_result with isError=true, reusing the same field name that MCP uses.",
+      "A successful empty list, so that the agent searches for alternative matches."
     ],
     "correct_original": [
       0
@@ -642,6 +782,13 @@
       "Declarar cobertura completa porque dos fuentes respondieron.",
       "Repetir indefinidamente mientras el resto del sistema espera."
     ],
+    "stem_en": "One of a specialist's three sources fails temporarily. Which TWO measures are appropriate?",
+    "options_en": [
+      "Attempt local recovery within the agreed retry budget before escalating.",
+      "If it persists, return what was obtained, the failure and the attempts made.",
+      "Report the result as complete, since two of the three sources responded.",
+      "Keep retrying until the source recovers, while the rest of the system waits."
+    ],
     "correct_original": [
       0,
       1
@@ -671,6 +818,13 @@
       "Forzar siempre el extractor de cartas aunque puedan llegar facturas.",
       "tool_choice=auto y asumir que siempre elegirá una herramienta.",
       "Dar ambos esquemas como prosa y eliminar sus definiciones de herramientas."
+    ],
+    "stem_en": "Archivo has two extractors with different schemas. It is not known in advance which document type will arrive, and the model must choose one of them rather than reply with free text. Which configuration is appropriate for that turn?",
+    "options_en": [
+      "tool_choice=any, with clearly differentiated tool descriptions and schemas.",
+      "tool_choice forcing the letter extractor, even though invoices may also arrive.",
+      "tool_choice=auto, trusting the model to call one of the two extractors.",
+      "Describe both schemas in prose in the system prompt and drop the tool definitions."
     ],
     "correct_original": [
       0
@@ -706,6 +860,13 @@
       "Rehacer toda la investigación para cada fecha citada.",
       "Permitirle inventar la fecha más probable para evitar rondas."
     ],
+    "stem_en": "The writer needs to confirm simple dates but should not investigate new topics. Which option balances scope and latency?",
+    "options_en": [
+      "A limited date-check tool, with complex cases delegated through the coordinator.",
+      "Access to the complete research toolset in addition to the writing tools.",
+      "Rerun the full research workflow whenever a date needs to be confirmed.",
+      "Let it supply the most probable date from memory to avoid extra rounds."
+    ],
     "correct_original": [
       0
     ],
@@ -735,6 +896,13 @@
       "url sin type y el token personal del mantenedor escrito en el repositorio.",
       "type=sdk dentro de .mcp.json como sustituto de un servidor HTTP remoto.",
       "Configuración solo en el perfil del mantenedor y una instrucción para que otros la hereden."
+    ],
+    "stem_en": "Archivo shares an HTTP MCP server among developers, each with their own environment token. Which project entry is consistent with the current client?",
+    "options_en": [
+      "type=http, the server url, and a ${TOKEN} reference inside the header value.",
+      "A url with no type and the maintainer's personal token written into the repo.",
+      "type=sdk in .mcp.json, used instead of an http entry for the remote server.",
+      "The entry kept in the maintainer's user profile, which the team is told to reuse."
     ],
     "correct_original": [
       0
@@ -770,6 +938,13 @@
       "Sustituir permisos por el hecho de anunciar una herramienta.",
       "Crear un servidor distinto por cada título de documento."
     ],
+    "stem_en": "The agent must know which manuals exist before searching inside them. What can help?",
+    "options_en": [
+      "Expose a catalog of the manuals as a resource, with useful metadata for each.",
+      "Rewrite each manual to include an index header so the agent can discover it.",
+      "Announce a search tool and treat its listing as the permission to use the manuals.",
+      "Run a separate MCP server for each manual title so each one can be discovered."
+    ],
     "correct_original": [
       0
     ],
@@ -793,17 +968,24 @@
     "domain": 2,
     "task": "2.5",
     "select": 1,
-    "stem_es": "Sin un índice estructural disponible, se buscan archivos terminados en .spec.ts. ¿Qué operación corresponde?",
+    "stem_es": "Se buscan archivos terminados en .spec.ts. ¿Qué operación corresponde?",
     "options_es": [
       "Una búsqueda de rutas con un patrón como **/*.spec.ts.",
       "Una búsqueda del texto literal .spec.ts dentro de cada archivo.",
       "Una escritura de nombres candidatos en un archivo nuevo.",
       "Una lectura completa de todos los documentos del repositorio."
     ],
+    "stem_en": "Files ending in .spec.ts are being searched for. Which operation fits?",
+    "options_en": [
+      "A path search using a glob pattern such as **/*.spec.ts to match file names.",
+      "A content search for the literal text .spec.ts inside the repository's files.",
+      "Writing a list of candidate file names to a new file and reviewing it later.",
+      "Reading the repository's files one at a time to see which of them are tests."
+    ],
     "correct_original": [
       0
     ],
-    "explanation_es": "Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos. En un proyecto con descubrimiento por grafo obligatorio se respeta primero esa regla y se usa texto como respaldo.",
+    "explanation_es": "Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos.",
     "distractor_reasons": [],
     "sources": [
       "GUIA"
@@ -828,6 +1010,13 @@
       "Sustituir la primera aparición sin revisar a qué función pertenece.",
       "Reescribir desde memoria descartando el contenido actual.",
       "Dar por aplicada la edición porque la intención era correcta."
+    ],
+    "stem_en": "The anchor text repeats in three functions and the file has changed. What is the next step?",
+    "options_en": [
+      "Re-read the current file and choose context that is unique before editing.",
+      "Replace the first occurrence without checking which function it belongs to.",
+      "Rewrite the section from memory of the earlier version and overwrite the current text.",
+      "Treat the edit as applied, because the intended change was correct in principle."
     ],
     "correct_original": [
       0
@@ -858,6 +1047,13 @@
       "Aumentar el límite de contexto sin cambiar el ámbito.",
       "Guardar el texto en un archivo personal con un nombre más corto."
     ],
+    "stem_en": "Only the repository author receives a convention that she saved in her profile. How should it be shared?",
+    "options_en": [
+      "Move the shared convention from the profile into versioned project instructions.",
+      "Ask the other developers to paste the convention into each session they start.",
+      "Increase the context window size and leave the convention's scope unchanged.",
+      "Save the text in a second personal file with a shorter name and a clearer title."
+    ],
     "correct_original": [
       0
     ],
@@ -887,6 +1083,13 @@
       "Comparar solo el texto del CLAUDE.md raíz sin mirar las reglas del paquete.",
       "Copiar todo al perfil personal del compañero y asumir que se resolvió el ámbito.",
       "Pedir al modelo que confirme que conoce todas las convenciones del repositorio."
+    ],
+    "stem_en": "Orion has a rule imported in the project CLAUDE.md and another version in a package. A teammate observes different behavior. Which diagnosis produces useful evidence?",
+    "options_en": [
+      "Inspect the loaded files, their scope and imports, and the paths actually edited.",
+      "Compare the text of the root CLAUDE.md alone, without reading the package's rules.",
+      "Copy everything to the teammate's personal profile and assume the scope is resolved.",
+      "Ask the model to confirm that it knows the repository's conventions."
     ],
     "correct_original": [
       0
@@ -922,6 +1125,13 @@
       "Guardarlo solo en el historial privado del autor.",
       "Convertir todos los documentos del proyecto en instrucciones universales."
     ],
+    "stem_en": "The team wants to invoke a specific accessibility review without loading its whole procedure into every session. What fits?",
+    "options_en": [
+      "A project skill that packages the review instructions and the tools it needs.",
+      "Paste the complete procedure at the start of each prompt where it might apply.",
+      "A personal custom command in the author's home directory, not in the repository.",
+      "Rewrite the project documents as general instructions loaded at session start."
+    ],
     "correct_original": [
       0
     ],
@@ -951,6 +1161,13 @@
       "allowed-tools preaprueba; hay que aplicar restricciones reales si se deben quitar capacidades.",
       "allowed-tools elimina automáticamente todas las herramientas no enumeradas.",
       "La ausencia de Write en allowed-tools bloquea también toda vía indirecta de modificación."
+    ],
+    "stem_en": "An Orion skill uses context: fork and allowed-tools: Read, Grep, Glob. According to the documentation archived in November 2026, which TWO statements are correct?",
+    "options_en": [
+      "The fork isolates context; on its own it does not show that writes are impossible.",
+      "allowed-tools pre-approves tools; removing capabilities requires real restrictions.",
+      "allowed-tools removes the tools that are not listed from the skill's available set.",
+      "Leaving Write out of allowed-tools also blocks indirect ways of modifying files."
     ],
     "correct_original": [
       0,
@@ -986,6 +1203,13 @@
       "Una regla de despliegue global para cualquier archivo.",
       "Duplicar toda la documentación en cada archivo de prueba."
     ],
+    "stem_en": "The same rule must apply to *.test.ts files scattered across several packages. What is appropriate?",
+    "options_en": [
+      "A path-scoped rule in .claude/rules whose paths pattern is **/*.test.ts.",
+      "A personal instruction file that lists the first package's test conventions.",
+      "A global rule loaded for any file, with the test conventions in a dedicated section.",
+      "Paste the convention text into a header comment inside each test file."
+    ],
     "correct_original": [
       0
     ],
@@ -1016,6 +1240,13 @@
       "El número de veces que se repite la palabra test.",
       "El historial de una sesión que no tocó esos archivos."
     ],
+    "stem_en": "A test rule ends up loading when production configuration is edited. What should be reviewed?",
+    "options_en": [
+      "The paths pattern and its scope, tested with cases that should and should not match.",
+      "The wording of the rule, softening its severity so it is applied less often.",
+      "How often the word “test” appears in the rule, in case it is over-weighted.",
+      "The transcript of a previous session in which those files were not touched."
+    ],
     "correct_original": [
       0
     ],
@@ -1045,6 +1276,13 @@
       "Solo el número de líneas; seis líneas siempre requieren ejecución directa.",
       "Que una de las estrategias tenga menos código, sin revisar consumidores.",
       "Planificar únicamente después de aplicar el cambio para documentar lo ocurrido."
+    ],
+    "stem_en": "Orion must change six lines of a contract shared by many consumers, with two compatibility strategies. What justifies investigating before executing?",
+    "options_en": [
+      "The dependencies and the compatibility decision, even if the diff is small.",
+      "The line count: a six-line change is small enough for direct execution.",
+      "That one of the two strategies needs less code, without reviewing the consumers.",
+      "Planning after the change is applied, to document what was done."
     ],
     "correct_original": [
       0
@@ -1079,6 +1317,13 @@
       "Omitir las referencias para que los resúmenes sean más cortos.",
       "Dar por terminada la investigación cuando se llena la ventana."
     ],
+    "stem_en": "A migration analysis runs out of context before reaching the decisions. Which change helps?",
+    "options_en": [
+      "Delegate focused questions and return verifiable summaries with references.",
+      "Increase the narrative detail of each search result and keep the same scope.",
+      "Drop the file references from the summaries to make them shorter and cheaper.",
+      "Stop the investigation where the context window fills up and report what was reached."
+    ],
     "correct_original": [
       0
     ],
@@ -1109,6 +1354,13 @@
       "Eliminar los datos vacíos de las pruebas para evitar fallos.",
       "Cambiar solo el nombre de la función sin definir comportamiento."
     ],
+    "stem_en": "A migration treats null and the empty string as the same, but the product distinguishes them. What adds the most?",
+    "options_en": [
+      "Concrete examples and tests with both values and their expected outputs.",
+      "Raise the temperature so the model explores how to resolve the ambiguity.",
+      "Remove the empty-string cases from the tests so that they stop failing.",
+      "Rename the function to say it handles both values, without specifying the behavior."
+    ],
     "correct_original": [
       0
     ],
@@ -1138,6 +1390,13 @@
       "Una solicitud de hacer pasar pruebas reduciendo su cobertura.",
       "Cambios de estilo para hacer más legible el informe del error."
     ],
+    "stem_en": "A cache fix repairs stale data but breaks invalidation. What should the next iteration include?",
+    "options_en": [
+      "Both behaviors, their relationship and tests of the required invariant.",
+      "A description of the new invalidation symptom, leaving out the earlier fix.",
+      "A request to make the tests pass, with permission to narrow their coverage.",
+      "A cleaned-up bug report with formatting edits that make it easier to read."
+    ],
     "correct_original": [
       0
     ],
@@ -1166,6 +1425,13 @@
       "Usar -p y publicar el primer texto que aparezca sin validar su tipo de resultado.",
       "Usar modo interactivo con un prompt que pida no hacer preguntas nunca.",
       "Usar --output-format json como prueba suficiente de que no hubo fallos ni rechazos."
+    ],
+    "stem_en": "Orion needs a non-interactive job and findings that another process will interpret. Which combination of decisions matches the studied pattern?",
+    "options_en": [
+      "Use -p with a structured contract and check the envelope, the errors and the process result.",
+      "Use -p and publish the first text that appears, without validating its result type.",
+      "Use interactive mode with a prompt that tells the model to avoid asking questions.",
+      "Use --output-format json as sufficient proof that there were no failures or refusals."
     ],
     "correct_original": [
       0
@@ -1201,6 +1467,13 @@
       "Todos los repositorios de la organización sin seleccionar cambios.",
       "Una instrucción de ocultar cualquier hallazgo repetido aunque siga abierto."
     ],
+    "stem_en": "After each commit the same already-fixed problems get published again. What context is missing?",
+    "options_en": [
+      "Previous findings with their status, plus the changes now being re-evaluated.",
+      "A longer prompt giving more guidance on the style of the review comments.",
+      "More repository code from the organization, without narrowing it to the changes.",
+      "An instruction to suppress findings reported before, even if they remain open."
+    ],
     "correct_original": [
       0
     ],
@@ -1230,6 +1503,13 @@
       "El número máximo de comentarios sin aclarar su significado.",
       "La temperatura como único control de falsos positivos.",
       "Un requisito de que todo comentario suene muy seguro."
+    ],
+    "stem_en": "A reviewer mixes style changes with errors that break the workflow. What should be adjusted first?",
+    "options_en": [
+      "The inclusion and severity criteria, with contrasting examples of each level.",
+      "The maximum number of comments, without clarifying what counts as an issue.",
+      "The sampling temperature, treating it as the way to control false positives.",
+      "A confidence threshold that filters out comments the model is unsure about."
     ],
     "correct_original": [
       0
@@ -1261,6 +1541,13 @@
       "Publicar más comentarios para que alguno sea útil.",
       "Aprobar la categoría solo porque el modelo declara alta confianza."
     ],
+    "stem_en": "A style rule reports false errors and developers ignore the whole report. Which approach helps?",
+    "options_en": [
+      "Isolate that category, refine it and validate it before turning it back on.",
+      "Disable the checks for functional errors as well, to cut noise across the report.",
+      "Publish a larger number of comments per review so that some of them are useful.",
+      "Approve the category on the strength of the model's stated high confidence."
+    ],
     "correct_original": [
       0
     ],
@@ -1290,6 +1577,13 @@
       "Tres fechas ISO de meses distintos, todas con el mismo resultado correcto.",
       "Los documentos que ya pasaron, sin incluir la salida esperada para evitar sesgo.",
       "Una lista exhaustiva de años posibles sin mostrar cómo decidir ante falta de evidencia."
+    ],
+    "stem_en": "Archivo extracts exact dates. It fails on seasons and contradictory documents, although it gets explicit ISO dates right. Which few-shot set adds the most?",
+    "options_en": [
+      "Exact-date, approximate-period and conflict cases, each with its output and reason.",
+      "Three ISO dates from different months, each with the same correct output.",
+      "The documents that already pass, shown without the expected output to avoid bias.",
+      "A list of candidate years, with no guidance on deciding when evidence is missing."
     ],
     "correct_original": [
       0
@@ -1325,6 +1619,13 @@
       "Dar por concluida la validación con los documentos de demostración.",
       "Exigir la misma redacción aunque cambie el contenido de origen."
     ],
+    "stem_en": "Extraction works on the two demo documents. Which TWO steps are useful?",
+    "options_en": [
+      "Include examples that walk through the relevant ambiguous case and its output.",
+      "Evaluate documents of different structure that were not used for tuning.",
+      "Declare validation complete, since both demo documents extract correctly.",
+      "Require the same output wording even when the source content changes."
+    ],
     "correct_original": [
       0,
       1
@@ -1355,6 +1656,13 @@
       "exactDate es opcional con type string; el consumidor supone que siempre existe.",
       "required incluye exactDate de type string y se usa una fecha por defecto si falta evidencia.",
       "Se elimina exactDate del esquema y se pide su presencia solo en el prompt."
+    ],
+    "stem_en": "The Archivo consumer requires the exactDate key to be present, but its value may be unknown. Which fragment best expresses that contract?",
+    "options_en": [
+      "required includes exactDate, and its type allows both string and null.",
+      "exactDate is optional with type string; the consumer assumes the key is present.",
+      "exactDate is required with type string; a default date is used if there is no evidence.",
+      "exactDate is removed from the schema, and the prompt asks the model to include it."
     ],
     "correct_original": [
       0
@@ -1391,6 +1699,13 @@
       "Cambiar el nombre del campo a importe_verificado.",
       "Repetir el mismo esquema esperando que eso pruebe el dato."
     ],
+    "stem_en": "An invoice's JSON is valid, but the amount is not in the source. What follows?",
+    "options_en": [
+      "Reject the value or send it to review through evidence and business-rule checks.",
+      "Accept the amount, since the response parsed and matched the schema without errors.",
+      "Rename the field to verified_amount so downstream consumers treat it as checked.",
+      "Resend the request with the same schema, treating a second valid parse as proof."
+    ],
     "correct_original": [
       0
     ],
@@ -1420,6 +1735,13 @@
       "Solo «respuesta incorrecta», sin el documento ni el valor fallido.",
       "Un documento inventado que ya cumpla el esquema.",
       "La misma salida anterior tratada como ejemplo correcto."
+    ],
+    "stem_en": "The validator requires normalizing a date that does appear in the document. Which input helps the next attempt?",
+    "options_en": [
+      "The source, the previous extraction and a precise explanation of the invalid format.",
+      "A note that the response was incorrect, without the document or the failed value.",
+      "A fabricated document that already satisfies the schema, used in place of the source.",
+      "The previous output, presented to the model as a correct example to follow."
     ],
     "correct_original": [
       0
@@ -1451,6 +1773,13 @@
       "Un promedio de ambos como si fuera el total declarado.",
       "Un total nulo sin explicar la contradicción encontrada."
     ],
+    "stem_en": "The sum of the line items and the printed total differ. Which output serves review?",
+    "options_en": [
+      "Both values, a conflict indicator and references to the supporting evidence.",
+      "The value that the model judges most plausible, with the other one dropped.",
+      "The average of the two amounts, written into the field for the declared total.",
+      "A null total and no mention of the contradiction found in the document."
+    ],
     "correct_original": [
       0
     ],
@@ -1479,6 +1808,13 @@
       "Cada 3 h; la reserva total máxima sería 27.5 h.",
       "Cada 4 h; basta con que la mediana observada sea inferior a 24 h.",
       "Cada 5 h; se puede excluir del SLA la espera antes del envío."
+    ],
+    "stem_en": "Archivo receives documents continuously. SLA: 27 h from arrival; 24 h are reserved for the batch window and 0.5 h for collection and validation. Which submission frequency fits that worst-case wait budget?",
+    "options_en": [
+      "Every 2 h, so the worst-case total reserve would be 26.5 h.",
+      "Every 3 h, so the worst-case total reserve would be 27.5 h.",
+      "Every 4 h, as long as the observed median wait stays below 24 h.",
+      "Every 5 h, with the wait before submission excluded from the SLA."
     ],
     "correct_original": [
       0
@@ -1514,6 +1850,13 @@
       "Reenviar los cien documentos con un esquema más permisivo para reducir errores.",
       "Marcar los dos sin fuente como null correcto y cerrar su revisión sin señalar la ausencia."
     ],
+    "stem_en": "Archivo keeps 93 successes; three failures exceeded the context limit, two were transient and two lack a necessary external source. Which recovery respects the evidence and avoids useless work?",
+    "options_en": [
+      "Keep successes, adapt the three oversized inputs, retry transient failures, obtain the missing sources.",
+      "Resubmit the seven failed documents as they are, repeating the request until each yields a valid response.",
+      "Resubmit the entire batch of one hundred documents with a more permissive schema to cut errors.",
+      "Record null for the two documents lacking a source and close their review without noting the gap."
+    ],
     "correct_original": [
       0
     ],
@@ -1548,6 +1891,13 @@
       "Una afirmación de que el cambio ya fue aprobado.",
       "Una lista de conclusiones que el revisor debe repetir."
     ],
+    "stem_en": "A second opinion is wanted on generated code. Which input favors an independent review?",
+    "options_en": [
+      "The requirements, the change and the relevant tests, without the generator's defense.",
+      "The generator's own explanation of why its code is correct, as the review basis.",
+      "A note stating that the change already passed an earlier review by the team.",
+      "A list of pre-written conclusions that the reviewer is expected to confirm."
+    ],
     "correct_original": [
       0
     ],
@@ -1576,6 +1926,13 @@
       "Sumar sus porcentajes de confianza para superar un umbral.",
       "Considerar la coincidencia una prueba suficiente de severidad.",
       "Exigir que sus mensajes sean idénticos palabra por palabra."
+    ],
+    "stem_en": "Two reviewers agree on an alert, but there is no example that reproduces it. What is missing to act on solid grounds?",
+    "options_en": [
+      "Verify the defect's evidence and effect with a concrete reproducing case.",
+      "Add the two reviewers' confidence scores and compare the total against a threshold.",
+      "Treat the agreement between the two reviewers as sufficient proof of severity.",
+      "Require that the two messages match word for word before acting on the alert."
     ],
     "correct_original": [
       0
@@ -1607,6 +1964,13 @@
       "Un modelo más seguro de sí mismo sin cambiar el contexto.",
       "Eliminar los resultados de herramientas al terminar cada vuelta."
     ],
+    "stem_en": "Compression drops the agreed amount and the case identifier. Which design reduces that risk?",
+    "options_en": [
+      "A persistent block of critical facts kept apart from the narrative summary.",
+      "A rolling summary that retains the most recent turns and trims the earlier ones.",
+      "A model that expresses more confidence in its summaries, with the context unchanged.",
+      "Deleting tool results at the end of each turn to free up context space."
+    ],
     "correct_original": [
       0
     ],
@@ -1636,6 +2000,13 @@
       "Duplicar las respuestas completas al principio y al final de cada turno.",
       "Suprimir todas las fechas porque ocupan espacio.",
       "Guardar solo una conclusión sin permitir volver a la fuente."
+    ],
+    "stem_en": "Each query adds thousands of irrelevant fields to the case. Which intervention improves the context?",
+    "options_en": [
+      "Normalize the output to the relevant facts, with identifiers and retrievable evidence.",
+      "Repeat the complete responses at the start and end of each turn to keep them in view.",
+      "Remove the date fields from the records to save space and keep the rest as is.",
+      "Keep a one-line conclusion for the case and discard the link back to the source."
     ],
     "correct_original": [
       0
@@ -1667,6 +2038,13 @@
       "Repetir que el agente automatizado también puede ayudar hasta convencerla.",
       "Cerrar el caso porque la solicitud no contiene un error técnico."
     ],
+    "stem_en": "The person says “I want to talk to a person now.” What should the workflow prioritize?",
+    "options_en": [
+      "The planned handoff to a human, with enough context for the operator to continue.",
+      "A full investigation of the issue first, even though the person did not request one.",
+      "Persuading the person that the automated agent can also help before handing off.",
+      "Closing the case because the request does not describe a technical error."
+    ],
     "correct_original": [
       0
     ],
@@ -1695,6 +2073,13 @@
       "Usar la cuenta más antigua porque parece más probable.",
       "Elegir la de mayor saldo para poder completar el flujo.",
       "Actuar sobre ambas y corregir después si alguien reclama."
+    ],
+    "stem_en": "Two accounts have the same name and the operation affects their balance. What is the next step?",
+    "options_en": [
+      "Ask the user for an identifier that tells the accounts apart before acting.",
+      "Act on the older account, since it is the more likely match for that name.",
+      "Pick the account with the higher balance so the workflow can be completed.",
+      "Apply the operation to both accounts and fix it later if either holder complains."
     ],
     "correct_original": [
       0
@@ -1725,6 +2110,13 @@
       "Un informe sin límites para que el lector no pierda confianza.",
       "Una mezcla de hechos verificados y conjeturas sin distinguirlos."
     ],
+    "stem_en": "A review found evidence in two repositories and could not query a third. Which report is correct?",
+    "options_en": [
+      "Attributed findings plus an explicit limitation for the unqueried repository.",
+      "A conclusion that the third repository holds nothing relevant to the question.",
+      "A report that leaves out the access problem so readers keep their confidence.",
+      "Verified facts mixed with conjectures about the third repository, in one uniform tone."
+    ],
     "correct_original": [
       0
     ],
@@ -1753,6 +2145,13 @@
       "Nada: el estado escrito debe considerarse autoritativo para siempre.",
       "Que el resumen tenga suficiente longitud narrativa.",
       "Que el modelo recuerde el nombre del especialista."
+    ],
+    "stem_en": "A manifest saved yesterday says a task is still active. What must be verified before continuing?",
+    "options_en": [
+      "The current state of files and processes, keeping the checked and pending items.",
+      "That the manifest file is well formed; its recorded state can then be treated as current.",
+      "That the saved summary is detailed enough to brief the specialists on resuming.",
+      "That the model can recall which specialist was working on the task yesterday."
     ],
     "correct_original": [
       0
@@ -1783,6 +2182,13 @@
       "Usar solo 24/32 global para reducir revisión de ambos segmentos por igual.",
       "Tomar la confianza emitida como probabilidad calibrada y omitir los resultados etiquetados.",
       "Eliminar las cartas de la evaluación para comparar solo formatos homogéneos."
+    ],
+    "stem_en": "In Archivo, high confidence is right on 20 of 24 forms and 4 of 8 letters. Which conclusion best guides the review?",
+    "options_en": [
+      "Measure and tune by segment; letters need attention even if the average looks acceptable.",
+      "Rely on the overall 24/32 accuracy to reduce review for both segments by the same amount.",
+      "Treat the stated confidence as a calibrated probability and skip the labeled results.",
+      "Drop the letters from the evaluation, so that the remaining formats are homogeneous."
     ],
     "correct_original": [
       0
@@ -1818,6 +2224,13 @@
       "Asumir que los no revisados son correctos por definición.",
       "Seleccionar solo los documentos de formato más limpio."
     ],
+    "stem_en": "The human queue contains only low-confidence items. Which TWO improvements would let you measure the automated part?",
+    "options_en": [
+      "Randomly sample high-confidence items inside the relevant segments.",
+      "Compare accuracy by document type and by field against labeled results.",
+      "Count the unreviewed items as correct, since no reviewer flagged them.",
+      "Build the sample from the documents with the cleanest formats."
+    ],
     "correct_original": [
       0,
       1
@@ -1848,6 +2261,13 @@
       "Elegir la publicada hoy por ser la publicación más reciente de las dos.",
       "Elegir la que llegó al final de la búsqueda para mantener un orden reproducible.",
       "Calcular una media única y conservar solo las referencias bibliográficas al final."
+    ],
+    "stem_en": "Lumen compares a publication from today with 2020 data and another from yesterday with 2026 measurements. The methods differ. How can a misleading synthesis be avoided?",
+    "options_en": [
+      "Keep the period, method and source of each figure before deciding comparability.",
+      "Choose today's publication as authoritative, since it is the more recent of the two.",
+      "Choose the figure retrieved last in the search, to keep the order reproducible.",
+      "Compute a single average of the figures and list the references at the end."
     ],
     "correct_original": [
       0

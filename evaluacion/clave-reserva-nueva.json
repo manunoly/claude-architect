@@ -1,0 +1,226 @@
+[
+  {
+    "number": 1,
+    "domain": 1,
+    "task": "1.4",
+    "scenario": "Customer Support Resolution Agent",
+    "select": 1,
+    "correct": [
+      "B"
+    ],
+    "target": "Decompose multi-concern request, parallel investigation, unified resolution"
+  },
+  {
+    "number": 2,
+    "domain": 1,
+    "task": "1.5",
+    "scenario": "Customer Support Resolution Agent",
+    "select": 1,
+    "correct": [
+      "D"
+    ],
+    "target": "PostToolUse hook normalising heterogeneous tool outputs"
+  },
+  {
+    "number": 3,
+    "domain": 2,
+    "task": "2.2",
+    "scenario": "Customer Support Resolution Agent",
+    "select": 1,
+    "correct": [
+      "A"
+    ],
+    "target": "Structured error metadata: access failure vs valid empty result"
+  },
+  {
+    "number": 4,
+    "domain": 5,
+    "task": "5.2",
+    "scenario": "Customer Support Resolution Agent",
+    "select": 2,
+    "correct": [
+      "A",
+      "C"
+    ],
+    "target": "Sentiment and self-reported confidence are unreliable escalation proxies"
+  },
+  {
+    "number": 5,
+    "domain": 3,
+    "task": "3.2",
+    "scenario": "Code Generation with Claude Code",
+    "select": 1,
+    "correct": [
+      "C"
+    ],
+    "target": "Personal skill variant in ~/.claude/skills/ under a different name"
+  },
+  {
+    "number": 6,
+    "domain": 3,
+    "task": "3.4",
+    "scenario": "Code Generation with Claude Code",
+    "select": 1,
+    "correct": [
+      "A"
+    ],
+    "target": "Plan mode for a multi-approach migration, then direct execution"
+  },
+  {
+    "number": 7,
+    "domain": 3,
+    "task": "3.4",
+    "scenario": "Code Generation with Claude Code",
+    "select": 1,
+    "correct": [
+      "D"
+    ],
+    "target": "Explore subagent isolates verbose discovery output"
+  },
+  {
+    "number": 8,
+    "domain": 3,
+    "task": "3.1",
+    "scenario": "Code Generation with Claude Code",
+    "select": 1,
+    "correct": [
+      "B"
+    ],
+    "target": "/memory to verify which memory files are loaded"
+  },
+  {
+    "number": 9,
+    "domain": 1,
+    "task": "1.3",
+    "scenario": "Multi-Agent Research System",
+    "select": 1,
+    "correct": [
+      "C"
+    ],
+    "target": "allowedTools must include \"Task\" for the coordinator to spawn subagents"
+  },
+  {
+    "number": 10,
+    "domain": 1,
+    "task": "1.2",
+    "scenario": "Multi-Agent Research System",
+    "select": 1,
+    "correct": [
+      "A"
+    ],
+    "target": "Iterative refinement: coordinator finds gaps and re-delegates targeted queries"
+  },
+  {
+    "number": 11,
+    "domain": 5,
+    "task": "5.1",
+    "scenario": "Multi-Agent Research System",
+    "select": 1,
+    "correct": [
+      "D"
+    ],
+    "target": "Lost in the middle: key-findings summary first plus explicit section headers"
+  },
+  {
+    "number": 12,
+    "domain": 2,
+    "task": "2.3",
+    "scenario": "Developer Productivity with Claude",
+    "select": 1,
+    "correct": [
+      "B"
+    ],
+    "target": "Too many tools (18) degrade selection; scope tools per role"
+  },
+  {
+    "number": 13,
+    "domain": 2,
+    "task": "2.4",
+    "scenario": "Developer Productivity with Claude",
+    "select": 1,
+    "correct": [
+      "C"
+    ],
+    "target": "MCP tool descriptions: all servers' tools available; richer description beats built-in Grep"
+  },
+  {
+    "number": 14,
+    "domain": 2,
+    "task": "2.5",
+    "scenario": "Developer Productivity with Claude",
+    "select": 1,
+    "correct": [
+      "A"
+    ],
+    "target": "Edit fails on a non-unique anchor: Read + Write fallback"
+  },
+  {
+    "number": 15,
+    "domain": 1,
+    "task": "1.7",
+    "scenario": "Developer Productivity with Claude",
+    "select": 1,
+    "correct": [
+      "D"
+    ],
+    "target": "fork_session for two approaches from a shared baseline"
+  },
+  {
+    "number": 16,
+    "domain": 5,
+    "task": "5.4",
+    "scenario": "Developer Productivity with Claude",
+    "select": 2,
+    "correct": [
+      "B",
+      "D"
+    ],
+    "target": "Context degradation in long exploration: scratchpad file and /compact"
+  },
+  {
+    "number": 17,
+    "domain": 4,
+    "task": "4.1",
+    "scenario": "Claude Code for Continuous Integration",
+    "select": 1,
+    "correct": [
+      "C"
+    ],
+    "target": "Temporarily disable high false-positive categories while writing explicit criteria"
+  },
+  {
+    "number": 18,
+    "domain": 4,
+    "task": "4.5",
+    "scenario": "Claude Code for Continuous Integration",
+    "select": 2,
+    "correct": [
+      "A",
+      "D"
+    ],
+    "target": "Batch constraints: no mid-request tool calls; resubmit only failures by custom_id"
+  },
+  {
+    "number": 19,
+    "domain": 4,
+    "task": "4.3",
+    "scenario": "Structured Data Extraction",
+    "select": 1,
+    "correct": [
+      "B"
+    ],
+    "target": "Forced tool_choice to run extract_metadata first"
+  },
+  {
+    "number": 20,
+    "domain": 4,
+    "task": "4.4",
+    "scenario": "Structured Data Extraction",
+    "select": 2,
+    "correct": [
+      "B",
+      "C"
+    ],
+    "target": "calculated_total vs stated_total + conflict_detected; retry cannot recover absent information"
+  }
+]

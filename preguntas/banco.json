@@ -351,7 +351,7 @@
     "domain": 2,
     "task": "2.5",
     "question_es": "¿Cómo elegir Grep, Glob y Read?",
-    "answer_es": "Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos. En un proyecto con descubrimiento por grafo obligatorio se respeta primero esa regla y se usa texto como respaldo.",
+    "answer_es": "Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos.",
     "common_error": "Usar una herramienta de rutas para buscar semántica del contenido o leer todo primero.",
     "scenario": "productividad",
     "sources": [

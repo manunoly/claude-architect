@@ -4,7 +4,7 @@ Leer conceptos/03-agentes-orquestacion.md antes de preguntar. Se dispone de resp
 
 Diseña qué ocurre con `tool_use`, `end_turn`, respuesta incompleta y límite de herramientas. Un límite no debe producir un estado de éxito. En el fixture todas las herramientas son lecturas independientes; justificar qué cambiaría con acciones dependientes o con efectos.
 
-Después revisar [solucion.ts](solucion.ts). Dibujar una traza y explicar por qué la frase «ya está» no termina el bucle. Explicar qué estado faltaría para reanudar llamadas pendientes tras un corte.
+Escribe tu diseño antes de abrir intento.ts: sus comentarios y comprobaciones fijan las decisiones esperadas. Después impleméntalo en [intento.ts](intento.ts) (esqueleto con TODO) y ejecútalo con `node --experimental-strip-types practicas/03-bucle-agente/intento.ts` hasta que pasen las comprobaciones; luego compara con [solucion.ts](solucion.ts). Dibujar una traza y explicar por qué la frase «ya está» no termina el bucle. Explicar qué estado faltaría para reanudar llamadas pendientes tras un corte.
 
 La lógica reproduce un patrón conceptual de Messages API. El Agent SDK puede administrar su propio bucle y expone otras interfaces. Esta simulación no demuestra una integración real con ninguno de los dos servicios.
 

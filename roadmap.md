@@ -14,9 +14,10 @@ La guía oficial descargada es versión 1.0, efectiva en julio de 2026, con 30 t
 | D1: agentes y orquestación | 12.5 | Bucles, delegación, hooks, sesiones y handoffs |
 | D3: Claude Code | 9.25 | Jerarquía, reglas, skills, planificación y CI |
 | D5: contexto y fiabilidad | 6.75 | Hechos, recuperación, escalado, calibración y procedencia |
-| Proyecto integrador | 6 | Diseño y verificación de un caso completo |
-| Evaluación final | 4 | Control de 60 reactivos, caso nuevo y defensa en inglés |
-| Revisión y refuerzo final | 2 | Corregir y transferir lo aprendido |
+| Preguntas de muestra oficiales | 0.75 | Las 12 de la guía, en inglés y cronometradas |
+| Proyecto integrador | 3.75 | Diseño, contratos, casos con resultado esperado y defensa; implementarlo es opcional |
+| Evaluación final | 4 | Control de 60 reactivos en inglés, caso nuevo y defensa en inglés |
+| Revisión y refuerzo final | 3.5 | Corrección del control, reserva nueva, refuerzo dirigido y reintento de errores |
 | **Total** | **60** | **15 por semana** |
 
 Las horas de dominio se aproximan a sus pesos oficiales; no son una predicción de cuántas preguntas saldrán. D1 se inicia con patrones y bucles antes de D2; su implementación y coordinación continúan después de aprender herramientas. Esta dependencia se respeta en las sesiones.
@@ -46,16 +47,20 @@ Cinco sesiones de tres horas por semana. Los números indican orden, no fechas o
 | 3 | 14 | D3: CI/cierre EN (2.25 h) + D5: contexto (0.75 h) | Hallazgos CI estructurados y cierre en inglés |
 | 3 | 15 | D5: compresión, recuperación y escalado (3 h) | Práctica 04 y manifiesto recuperable |
 | 4 | 16 | D5: calibración, procedencia/cierre EN (3 h) | Muestreo, conflictos y cierre en inglés |
-| 4 | 17 | Proyecto integrador Abeduls (3 h) | Arquitectura, contratos y conjunto de casos |
-| 4 | 18 | Proyecto integrador Abeduls (3 h) | Comprobaciones, errores y defensa de decisiones |
-| 4 | 19 | Control de 60 reactivos (2 h) + revisión (1 h) | Resultado bruto y registro de errores |
-| 4 | 20 | Caso nuevo (1 h) + defensa EN (1 h) + revisión (1 h) | Transferencia a otro sector y plan de refuerzo |
+| 4 | 17 | Muestras oficiales EN (0.75 h) + proyecto integrador (2.25 h) | Resultado cronometrado, distractores justificados; arquitectura, contratos y casos |
+| 4 | 18 | Control de 60 reactivos en inglés (2 h) + corrección (1 h) | Resultado de reforzados, básicos y por dominio; errores por tarea |
+| 4 | 19 | Reserva nueva EN y refuerzo dirigido (1.5 h) + proyecto (1.5 h) | Señal independiente; casos verificados frente a la alternativa |
+| 4 | 20 | Caso nuevo (1 h) + defensa EN (1 h) + reintento de errores (1 h) | Transferencia a otro sector y plan de refuerzo |
+
+El minicontrol en inglés de las sesiones 10 y 16 usa el diagnóstico archivado y ocupa tiempo de esas sesiones; no añade horas.
 
 ## Cursos y documentación
 - [Building with the Claude API](biblioteca/cursos/building-with-the-claude-api.txt): seleccionar secciones de prompting, tool use, agents/workflows y evaluación; no es necesario estudiar todas las ampliaciones.
 - [Introduction to MCP](biblioteca/cursos/introduction-to-model-context-protocol.txt): curso base del dominio 2.
 - [Claude Code in Action](biblioteca/cursos/claude-code-in-action.txt): acompañar configuración y flujos del dominio 3.
 - [Introduction to evals](biblioteca/cursos/introduction-to-evals.txt): apoyo a evaluación y fiabilidad.
+- [Introduction to subagents](https://academy.claude.com/courses/introduction-to-subagents) (unos 45 min) e [Introduction to agent skills](https://academy.claude.com/courses/introduction-to-agent-skills) (1 h): cursos oficiales gratuitos sobre las tareas 1.2-1.3 y 3.2. Son opcionales y sustituyen la lectura de las sesiones 9 y 12, eligiendo las lecciones indicadas en el guion de sesiones, sin añadir horas. Solo están online.
+- Los laboratorios y demos de los cursos piden una clave de API con saldo. Basta con los vídeos y la lectura; no es necesario hacer los laboratorios.
 - [Guía oficial local](biblioteca/examen/foundations-exam-guide.pdf), [biblioteca priorizada](biblioteca/LEEME.md) y [matriz de cobertura](seguimiento/cobertura-blueprint.csv).
 
 Los cursos pueden contener ejemplos Python y temas fuera de examen. Se traducen sus ideas a TypeScript; no se invierte el núcleo de estas cuatro semanas en visión, embeddings, infraestructura MCP, OAuth, streaming, precios o entrenamiento de modelos. No confundir ver un vídeo con haber practicado una habilidad.
@@ -76,7 +81,9 @@ Los cursos pueden contener ejemplos Python y temas fuera de examen. Se traducen 
 - Si un control crítico falla, el tema sigue abierto aunque la nota global sea alta.
 
 ## Evaluación final y límites
-El control usa 60 reactivos originales con distribución 16/11/12/12/9 por dominio, en 120 minutos. No se presenta como examen oficial ni como predictor validado. Objetivo interno: 85% global y 75% en cada dominio, más caso de transferencia y defensa en inglés. El control final se separa del banco de aprendizaje; no abrir su clave antes de responder.
+El examen oficial es en inglés: 60 reactivos en 120 minutos. El control final reproduce ese formato: 60 reactivos originales en inglés, con distribución 16/11/12/12/9 por dominio, y clave explicada en español. **Sus 60 conceptos son los del banco de aprendizaje**: 40 reactivos básicos comprueban fundamentos ya practicados y 20 reforzados profundizan con trazas, configuraciones y SLA. Por eso no es una medida independiente.
+
+La señal principal combina tres fuentes en inglés: los 20 reforzados del control, la [reserva nueva](evaluacion/reserva-nueva-en.md) (20 reactivos no derivados del banco) y las 12 preguntas de muestra oficiales. Objetivo interno: al menos 80% en los 40 reactivos de reforzados y reserva nueva, y ningún fallo en controles críticos. En el control completo, 85% global y 75% en cada dominio, más caso de transferencia y defensa en inglés. Nada de esto se presenta como examen oficial ni como predictor validado. No abrir ninguna clave antes de responder.
 
 Una sola prueba no basta para prometer preparación. Si el resultado no sostiene el dominio, se registra una fase adicional de refuerzo con casos nuevos, sin rebajar los criterios para terminar en la cuarta semana. Cualquier simulacro posterior deberá usar reactivos no vistos.
 

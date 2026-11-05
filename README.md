@@ -11,7 +11,7 @@ Material de preparación personal en español, con prácticas TypeScript offline
 
 ## Verificación local
 
-Con una versión de Node.js que soporte `--experimental-strip-types` (verificado con Node 24.22.1):
+Con una versión de Node.js que admita `--experimental-strip-types` (verificado con 22.23.3 y 24.22.1):
 
 ```sh
 node scripts/ejecutar-practicas.mjs

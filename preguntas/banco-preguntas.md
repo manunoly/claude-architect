@@ -2,6 +2,13 @@
 
 Usar después de explicar el tema y trabajar su ejemplo. Responder primero; después contrastar con [respuestas](respuestas.md). El banco no es un conjunto secreto ni un predictor validado del examen. Cada pregunta indica tarea de la guía y escenario.
 
+**Cómo corregir una respuesta abierta (0-2):**
+- 2 = contiene la idea central de la respuesta explicada, la justifica con un requisito del caso y no cae en el error frecuente.
+- 1 = idea central sin justificación, o justificación con una omisión importante.
+- 0 = falta la idea central o cae en el error frecuente.
+
+Cuenta como acierto un 2. Así se calcula el porcentaje de cada dominio, que se anota como x/n en la columna `aciertos` de progreso.csv.
+
 ## Dominio 1
 
 ### A01 · tarea 1.1 · aplicación
