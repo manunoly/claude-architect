@@ -260,7 +260,7 @@ Fuentes: [MCP](../biblioteca/mcp/docs/2026-07-28/learn/architecture.md) · [GUIA
 
 **Pregunta:** ¿Cómo elegir Grep, Glob y Read?
 
-**Respuesta:** Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos. En un proyecto con descubrimiento por grafo obligatorio se respeta primero esa regla y se usa texto como respaldo.
+**Respuesta:** Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos.
 
 **Error frecuente:** Usar una herramienta de rutas para buscar semántica del contenido o leer todo primero.
 

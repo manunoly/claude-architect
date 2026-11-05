@@ -295,7 +295,7 @@ Fuentes: [AGENTS](../biblioteca/engineering/building-effective-agents.html) · [
 
 ## 33 · D · D2 / tarea 2.5
 
-Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos. En un proyecto con descubrimiento por grafo obligatorio se respeta primero esa regla y se usa texto como respaldo.
+Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos.
 
 **Error principal a evitar:** Usar una herramienta de rutas para buscar semántica del contenido o leer todo primero.
 

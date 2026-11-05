@@ -33,3 +33,14 @@
 | Lote | batch | Trabajo asíncrono que tolera una ventana de procesamiento. |
 | Conjunto de reserva | held-out set | Casos separados de los usados para ajustar el sistema. |
 | Contrapartida | trade-off | Mejora con coste o limitación que debe justificarse. |
+| Comando personalizado | custom slash command | `.claude/commands/` (equipo) frente a `~/.claude/commands/` (personal). |
+| Habilidad | skill | Procedimiento bajo demanda en `SKILL.md`; `~/.claude/skills/` para variantes personales. |
+| Regla por rutas | path-scoped rule | Archivo de `.claude/rules/` con `paths`; solo se carga al editar archivos que coinciden. |
+| Modo plan | plan mode | Explora y propone sin editar; para cambios amplios o con varias alternativas. |
+| Ejecución directa | direct execution | Aplicar sin plan previo un cambio simple y bien acotado. |
+| Subagente de exploración | Explore subagent | Subagente de solo lectura que aísla el descubrimiento verboso y devuelve un resumen. |
+| Hook posterior a la herramienta | PostToolUse hook | Trata o sustituye el resultado antes de que lo lea el modelo; no deshace lo ejecutado. |
+| Compactar | /compact | Resumir la conversación para liberar contexto en sesiones largas. |
+| Perdido en medio | lost in the middle | El modelo atiende mejor al principio y al final de una entrada larga. |
+| Degradación del contexto | context degradation | Respuestas inconsistentes y genéricas en sesiones largas. |
+| Petición con varios asuntos | multi-concern request | Se descompone, se investiga cada asunto en paralelo y se da una resolución única. |

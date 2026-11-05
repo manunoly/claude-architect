@@ -7,6 +7,6 @@ Tu tarea: separar JSON inválido, estructura inválida y dato que no está suste
 1. Escribe el contrato y dos ejemplos correctos.
 2. Propón errores específicos que permitan una corrección útil.
 3. Explica qué cambiaría si el documento tuviera una fecha en lenguaje natural.
-4. Después compara con [solucion.ts](solucion.ts) y ejecuta sus comprobaciones.
+4. Escribe tu contrato antes de abrir intento.ts: sus comentarios y comprobaciones fijan las decisiones esperadas. Después implementa tu propuesta en [intento.ts](intento.ts) (esqueleto con TODO) y ejecútalo con `node --experimental-strip-types practicas/01-extraccion/intento.ts` hasta que pasen las comprobaciones; después compara con [solucion.ts](solucion.ts).
 
 La solución usa un subconjunto pedagógico de validación, con fechas ISO literales en los fixtures. No es un validador general de JSON Schema ni una demostración de structured outputs de la API.
