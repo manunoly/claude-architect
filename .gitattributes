@@ -1,0 +1,2 @@
+# Las fuentes descargadas deben conservar sus bytes y hashes SHA-256.
+biblioteca/** -text
