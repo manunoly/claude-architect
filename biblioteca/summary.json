@@ -1,0 +1,15 @@
+{
+  "downloaded": 407,
+  "unavailable": 0,
+  "bytes": 87112411,
+  "integrity_errors": [],
+  "by_kind": {
+    "course-page": 6,
+    "markdown": 387,
+    "full-corpus": 3,
+    "html": 6,
+    "pdf": 1,
+    "index": 3,
+    "json": 1
+  }
+}

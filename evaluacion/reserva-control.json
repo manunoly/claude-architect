@@ -1,0 +1,1874 @@
+[
+  {
+    "concept_id": "A01",
+    "domain": 1,
+    "task": "1.1",
+    "select": 1,
+    "stem_es": "Nexo recibe una respuesta con texto «solicitud resuelta», una llamada verificar_cuenta y stop_reason=tool_use. La herramienta aún no se ejecutó. El flujo exige identidad verificada antes de acreditar saldo. ¿Qué hace el controlador?",
+    "options_es": [
+      "Ejecutar la verificación permitida y continuar con su resultado identificado.",
+      "Terminar este turno y acreditar si el texto final describe una solución válida.",
+      "Solicitar otra generación sin registrar la llamada para confirmar la intención.",
+      "Registrar la verificación como completada y contrastarla en una auditoría posterior."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "tool_use requiere procesar la llamada y devolver su observación; el texto no confirma una verificación. La acreditación sigue bloqueada hasta contar con el estado exigido.",
+    "distractor_reasons": [
+      "Confunde la narración con evidencia del prerrequisito.",
+      "Pierde la llamada original y no aporta su observación.",
+      "Un registro sin ejecutar la verificación no satisface la condición previa."
+    ],
+    "sources": [
+      "TOOL-RESULTS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 1,
+    "option_order": [
+      0,
+      1,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "A02",
+    "domain": 1,
+    "task": "1.1",
+    "select": 1,
+    "stem_es": "Dos búsquedas independientes terminan en orden inverso al solicitado. ¿Cómo se agregan?",
+    "options_es": [
+      "Asociando cada resultado a su tool_use_id y preservando ambas llamadas.",
+      "Asociando por el orden en que llegaron las respuestas.",
+      "Uniendo todo en un texto sin identificar qué herramienta respondió.",
+      "Descartando la respuesta lenta para mantener el orden original."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Conservar los bloques del asistente que solicitaron las herramientas y devolver un tool_result por llamada, enlazado al tool_use_id correcto. Un fallo se representa explícitamente, sin perder la relación entre solicitud y observación. Las llamadas independientes pueden resolverse concurrentemente.",
+    "distractor_reasons": [],
+    "sources": [
+      "TOOL-RESULTS"
+    ],
+    "strengthened": false,
+    "number": 16,
+    "option_order": [
+      3,
+      0,
+      2,
+      1
+    ]
+  },
+  {
+    "concept_id": "A03",
+    "domain": 1,
+    "task": "1.1",
+    "select": 2,
+    "stem_es": "Nexo agota el presupuesto después de dos comprobaciones. Una tercera herramienta todavía no se ejecutó y no hay end_turn. Elige DOS medidas que conservan un estado correcto.",
+    "options_es": [
+      "Devolver estado interrumpido y los hechos ya verificados.",
+      "Guardar la llamada pendiente con su ID para decidir cómo retomarla.",
+      "Añadir un resultado de éxito para la llamada pendiente antes de guardar.",
+      "Resumir solo la última respuesta y eliminar las referencias de las comprobaciones."
+    ],
+    "correct_original": [
+      0,
+      1
+    ],
+    "explanation_es": "El límite es un guardarraíl, no finalización exitosa. Se conservan resultados observados y la solicitud pendiente, sin inventar una respuesta de herramienta.",
+    "distractor_reasons": [
+      "Fabrica una observación y puede habilitar acciones que dependen de ella.",
+      "Borra la información necesaria para revalidar y recuperar el trabajo."
+    ],
+    "sources": [
+      "AGENTS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 2,
+    "option_order": [
+      1,
+      0,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "A04",
+    "domain": 1,
+    "task": "1.2",
+    "select": 1,
+    "stem_es": "Una consulta necesita solo revisar un documento y citarlo. Hay cuatro especialistas disponibles. ¿Qué conviene?",
+    "options_es": [
+      "Invocar solo los necesarios y comprobar si su cobertura basta.",
+      "Ejecutar siempre los cuatro para mantener una arquitectura uniforme.",
+      "Enviar el trabajo al azar y aceptar la primera respuesta.",
+      "Pedir a cada especialista que rediseñe el sistema completo."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Determina alcance, elige especialistas, distribuye trabajo, agrega resultados y detecta lagunas. Centraliza la coordinación y recuperación para mantener visibilidad. No necesita invocar a todos los especialistas para una solicitud simple ni realizar él mismo todo el trabajo especializado.",
+    "distractor_reasons": [],
+    "sources": [
+      "AGENTS",
+      "SDK-SUBAGENTS"
+    ],
+    "strengthened": false,
+    "number": 17,
+    "option_order": [
+      0,
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    "concept_id": "A05",
+    "domain": 1,
+    "task": "1.2",
+    "select": 1,
+    "stem_es": "Tres agentes cubren la misma región y omiten otras dos. ¿Cuál es la corrección principal?",
+    "options_es": [
+      "Repartir alcances explícitos y revisar cobertura frente a la pregunta completa.",
+      "Aumentar la longitud máxima de sus informes manteniendo las tareas.",
+      "Elegir el informe más detallado y descartar los demás.",
+      "Solicitar a los tres que vuelvan a buscar exactamente lo mismo."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Asignar alcances distinguibles, como subtemas o tipos de fuente, y exigir un resultado con evidencia y límites. El coordinador contrasta el conjunto con el objetivo y vuelve a delegar lagunas concretas. La ausencia de duplicados no demuestra por sí sola cobertura suficiente.",
+    "distractor_reasons": [],
+    "sources": [
+      "AGENTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 18,
+    "option_order": [
+      0,
+      1,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "A06",
+    "domain": 1,
+    "task": "1.3",
+    "select": 1,
+    "stem_es": "Lumen pide a un sintetizador nuevo combinar dos informes. El coordinador dispone de hallazgos con fuente y fecha, pero el sintetizador no comparte su historial. ¿Qué entrada es suficiente y proporcionada?",
+    "options_es": [
+      "Hallazgos necesarios, fuentes, fechas, lagunas y contrato de síntesis.",
+      "El identificador de sesión del coordinador y una orden de continuar su memoria.",
+      "Todos los logs crudos, sin distinguir qué fuente respalda cada afirmación.",
+      "Las conclusiones finales propuestas, para que el sintetizador las redacte con seguridad."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "El contexto debe pasarse explícitamente y preservar procedencia. No se necesita trasladar todo el historial ni reemplazar evidencia por conclusiones persuasivas.",
+    "distractor_reasons": [
+      "Un ID no implica herencia automática del contexto del padre.",
+      "Más texto sin atribución no conserva la relación entre afirmación y fuente.",
+      "Predetermina la conclusión y omite la evidencia para contrastarla."
+    ],
+    "sources": [
+      "SDK-SUBAGENTS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 19,
+    "option_order": [
+      2,
+      1,
+      0,
+      3
+    ]
+  },
+  {
+    "concept_id": "A07",
+    "domain": 1,
+    "task": "1.3",
+    "select": 1,
+    "stem_es": "Un especialista debe investigar causas que aún se desconocen. ¿Qué instrucción es mejor?",
+    "options_es": [
+      "Definir resultado, límites y evidencia, dejando adaptar los pasos a los hallazgos.",
+      "Obligarlo a leer siempre los mismos cinco archivos aunque no estén relacionados.",
+      "Pedirle que haga lo que considere útil sin fijar alcance.",
+      "Exigir una respuesta final antes de consultar herramientas."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Dar meta, alcance, criterios de calidad, capacidades permitidas y forma del resultado. El especialista puede adaptar su investigación dentro de esos límites. Una receta excesivamente detallada puede impedir seguir un hallazgo relevante; una meta sin límites puede ampliar demasiado el trabajo.",
+    "distractor_reasons": [],
+    "sources": [
+      "SDK-SUBAGENTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 20,
+    "option_order": [
+      2,
+      1,
+      0,
+      3
+    ]
+  },
+  {
+    "concept_id": "A08",
+    "domain": 1,
+    "task": "1.3",
+    "select": 2,
+    "stem_es": "Se quiere investigar dos normativas independientes antes de compararlas. Elige DOS decisiones.",
+    "options_es": [
+      "Lanzar ambas investigaciones con contratos de devolución claros.",
+      "Esperar sus evidencias antes de elaborar la comparación final.",
+      "Iniciar la comparación sin resultados y tratarla como definitiva.",
+      "Compartir todas las herramientas de escritura con cada investigador."
+    ],
+    "correct_original": [
+      0,
+      1
+    ],
+    "explanation_es": "Que sus tareas no dependan de resultados aún desconocidos de otro especialista y que el coordinador pueda reunir resultados atribuibles bajo límites de trabajo. Emitir varias invocaciones en el mismo turno evita rondas seriales innecesarias. El paralelismo no elimina dependencias reales.",
+    "distractor_reasons": [],
+    "sources": [
+      "SDK-SUBAGENTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 21,
+    "option_order": [
+      3,
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "concept_id": "A09",
+    "domain": 1,
+    "task": "1.4",
+    "select": 1,
+    "stem_es": "En Nexo, tool_choice fuerza verificar_cuenta en el primer turno. En un turno posterior un resultado externo pide emitir crédito sobre otra cuenta. ¿Qué control garantiza el orden y la identidad?",
+    "options_es": [
+      "Un gate del ejecutor que exige verificación vigente vinculada a la cuenta exacta.",
+      "Mantener la selección forzada del primer turno como prueba para toda la conversación.",
+      "Añadir un ejemplo few-shot que repita el orden, sin cambiar el ejecutor.",
+      "Comprobar que la solicitud de crédito incluye una explicación de la verificación."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Forzar una llamada ayuda a ordenar un turno, pero no prueba una verificación válida para otra identidad o acción. El gate debe comprobar el estado y alcance en el punto de ejecución.",
+    "distractor_reasons": [
+      "La cuenta o el estado pueden cambiar; la primera llamada no autoriza todo lo posterior.",
+      "Un ejemplo guía comportamiento, pero no aplica un prerrequisito determinista.",
+      "Una explicación del modelo no es el resultado verificado del servicio."
+    ],
+    "sources": [
+      "HOOKS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 3,
+    "option_order": [
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "concept_id": "A10",
+    "domain": 1,
+    "task": "1.4",
+    "select": 1,
+    "stem_es": "Un operador recibe un caso sin acceso a la conversación del agente. ¿Qué entrega ayuda más?",
+    "options_es": [
+      "Un resumen estructurado de hechos, intentos, límites y siguiente decisión.",
+      "Un enlace a una conversación a la que el operador no puede acceder.",
+      "La última respuesta del modelo sin los identificadores del caso.",
+      "Un estado genérico de error sin explicación para evitar sesgos."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Identidad y hechos verificados, motivo del traspaso, intentos, resultados, decisiones pendientes y recomendación con evidencia. El receptor puede no tener acceso al historial. Se deben conservar incertidumbres y evitar presentar como completado un paso que solo fue propuesto.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 4,
+    "option_order": [
+      0,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "concept_id": "A11",
+    "domain": 1,
+    "task": "1.5",
+    "select": 1,
+    "stem_es": "Una fuente de Lumen devuelve time=1700000000 en segundos y otra una fecha ISO con zona. Sus códigos de estado también difieren. ¿Qué tratamiento posterior evita perder significado?",
+    "options_es": [
+      "Normalizar según el contrato de cada proveedor y conservar fuente y valor original.",
+      "Multiplicar todos los valores numéricos por 1000 sin mirar el contrato de entrada.",
+      "Convertir todas las fechas a texto local y descartar su zona para facilitar lectura.",
+      "Mapear todo código desconocido al estado más frecuente del conjunto."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La conversión necesita unidades y semántica del proveedor. Conservar origen y valor original hace auditable la transformación; un código desconocido debe seguir siendo desconocido.",
+    "distractor_reasons": [
+      "No todos los números representan segundos; la unidad no se adivina por el tipo.",
+      "Eliminar zona o referencia temporal puede alterar el instante interpretado.",
+      "La frecuencia no prueba equivalencia de un código que no está definido."
+    ],
+    "sources": [
+      "HOOKS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 5,
+    "option_order": [
+      0,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "concept_id": "A12",
+    "domain": 1,
+    "task": "1.5",
+    "select": 1,
+    "stem_es": "El hook registra una violación pero deja ejecutar la acción. ¿Qué conclusión procede?",
+    "options_es": [
+      "Hay observabilidad, pero no se ha demostrado el bloqueo requerido.",
+      "La política queda garantizada porque existe un registro.",
+      "El caso está aprobado si el modelo reconoce después el error.",
+      "La prueba es innecesaria cuando el prompt repite la regla."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Casos permitidos y denegados con efectos observables, incluyendo argumentos que intenten saltarse el requisito. La prueba debe mostrar que la ejecución prohibida no ocurre. Ver una advertencia en el texto no basta, y un hook sobre una vía no demuestra cobertura de otras vías.",
+    "distractor_reasons": [],
+    "sources": [
+      "HOOKS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 6,
+    "option_order": [
+      3,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "concept_id": "A13",
+    "domain": 1,
+    "task": "1.6",
+    "select": 1,
+    "stem_es": "Una conversión documental siempre valida, extrae y presenta el mismo contrato. ¿Cuál es una base razonable?",
+    "options_es": [
+      "Una secuencia explícita con comprobaciones entre etapas.",
+      "Un coordinador que inventa las etapas de nuevo en cada documento.",
+      "Varios agentes que compiten por definir el contrato final.",
+      "Una búsqueda abierta hasta que el modelo se sienta satisfecho."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Usar pasos fijos cuando la tarea se descompone de manera predecible; adaptar cuando la siguiente investigación depende de los hallazgos. La elección responde a las dependencias y criterios de éxito. Un flujo puede contener una llamada LLM sin convertirse en un agente autónomo.",
+    "distractor_reasons": [],
+    "sources": [
+      "AGENTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 31,
+    "option_order": [
+      1,
+      3,
+      0,
+      2
+    ]
+  },
+  {
+    "concept_id": "A14",
+    "domain": 1,
+    "task": "1.6",
+    "select": 1,
+    "stem_es": "Cada archivo parece correcto, pero un cambio de unidades rompe el consumidor. ¿Qué falta?",
+    "options_es": [
+      "Una pasada que siga el contrato y flujo entre productor y consumidor.",
+      "Más comentarios de estilo en cada archivo de forma independiente.",
+      "Un informe local más largo sin entradas de otros módulos.",
+      "Renombrar los archivos para agruparlos visualmente."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La pasada local concentra atención en cada archivo; la de integración sigue contratos y flujos que cruzan archivos. Así se pueden detectar defectos que ninguna revisión aislada ve. Agregar comentarios locales no produce automáticamente un análisis del comportamiento conjunto.",
+    "distractor_reasons": [],
+    "sources": [
+      "AGENTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 32,
+    "option_order": [
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "concept_id": "A15",
+    "domain": 1,
+    "task": "1.7",
+    "select": 1,
+    "stem_es": "Lumen reanuda una investigación: dos archivos cambiaron y los demás siguen iguales. ¿Qué opción reutiliza contexto sin tratar observaciones antiguas como actuales?",
+    "options_es": [
+      "Informar los cambios, reanalizar esas dependencias y conservar lo revalidado.",
+      "Reusar todos los resultados porque el ID de sesión coincide con la investigación.",
+      "Crear un fork y asumir que eso actualiza los resultados de herramientas heredados.",
+      "Descartar siempre todo el trabajo previo aunque se pueda verificar qué sigue vigente."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La decisión depende de vigencia de la evidencia. Una reanudación informada puede ahorrar trabajo; un fork no actualiza observaciones por sí mismo ni exige desechar todo.",
+    "distractor_reasons": [
+      "La identidad de sesión no prueba frescura de los archivos.",
+      "La ramificación conserva una base, no vuelve a ejecutar sus observaciones.",
+      "Pierde trabajo válido sin atender a la evidencia de cambios acotados."
+    ],
+    "sources": [
+      "SESSIONS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 22,
+    "option_order": [
+      0,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "concept_id": "A16",
+    "domain": 1,
+    "task": "1.7",
+    "select": 1,
+    "stem_es": "Dos ramas comparan estrategias de migración desde el mismo análisis. ¿Cómo debe decidir el coordinador?",
+    "options_es": [
+      "Contrastar evidencias y seleccionar o combinar decisiones explícitamente.",
+      "Tratar ambas propuestas como ya aplicadas por compartir origen.",
+      "Preferir automáticamente la rama que terminó primero.",
+      "Suponer que las memorias de ambas ramas se fusionaron."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Permite explorar alternativas desde una base compartida conservando ramas independientes. Cada rama necesita evidencias y sus decisiones no se fusionan por arte de magia. El fork no convierte una hipótesis en un cambio aplicado ni vuelve actuales los resultados heredados.",
+    "distractor_reasons": [],
+    "sources": [
+      "SESSIONS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 46,
+    "option_order": [
+      2,
+      0,
+      3,
+      1
+    ]
+  },
+  {
+    "concept_id": "T01",
+    "domain": 2,
+    "task": "2.1",
+    "select": 1,
+    "stem_es": "buscar_texto y obtener_por_id se confunden. ¿Qué intervención apunta a la causa?",
+    "options_es": [
+      "Distinguir condiciones de uso y semántica de sus entradas y resultados.",
+      "Aumentar el límite de generación manteniendo descripciones idénticas.",
+      "Reintentar toda llamada incorrecta sin indicar el error.",
+      "Acortar ambos nombres hasta que parezcan equivalentes."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Su propósito, condiciones de uso, formato de entradas, identificadores, límites y resultado. Los ejemplos deben resolver confusiones reales. También hay que revisar instrucciones generales que asocien palabras a herramientas incorrectas. El nombre corto por sí solo no corrige un contrato ambiguo.",
+    "distractor_reasons": [],
+    "sources": [
+      "TOOLS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 7,
+    "option_order": [
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  {
+    "concept_id": "T02",
+    "domain": 2,
+    "task": "2.1",
+    "select": 1,
+    "stem_es": "Un servicio de Lumen tiene consultar_documento(id) y publicar_documento(id, destino), pero una herramienta genérica los mezcla con parámetros opcionales y las mismas credenciales. ¿Qué rediseño conviene validar primero?",
+    "options_es": [
+      "Contratos distinguibles y permisos adecuados para lectura y publicación.",
+      "Una herramienta por cada campo de documento, todas con permisos de publicación.",
+      "Conservar la interfaz y hacer obligatorio que el modelo declare mode=read o write.",
+      "Reemplazar ambos por un acceso HTTP general para que el modelo elija el endpoint."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La separación debe aclarar selección y efectos y permitir aplicar permisos distintos. Añadir un campo declarativo no sustituye controles; tampoco conviene multiplicar opciones redundantes.",
+    "distractor_reasons": [
+      "Aumenta complejidad y no separa el permiso con efectos.",
+      "El modelo puede declarar un modo; el servicio todavía debe comprobar el derecho a ejecutarlo.",
+      "Amplía capacidades y oculta los contratos que se querían aclarar."
+    ],
+    "sources": [
+      "TOOLS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 23,
+    "option_order": [
+      2,
+      1,
+      0,
+      3
+    ]
+  },
+  {
+    "concept_id": "T03",
+    "domain": 2,
+    "task": "2.2",
+    "select": 1,
+    "stem_es": "Un servidor no responde y el informe concluye que no hay documentos. ¿Qué debe cambiar?",
+    "options_es": [
+      "Propagar la indisponibilidad y marcar la laguna de cobertura.",
+      "Conservar el vacío para simplificar todas las respuestas.",
+      "Convertir el timeout en un resultado negativo definitivo.",
+      "Completar el informe con documentos que el modelo recuerde."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Vacío significa que una consulta válida no encontró coincidencias. Un fallo de acceso significa que no se pudo obtener la evidencia. Preservar esta diferencia permite decidir si pedir permisos, recuperar el servicio o aceptar que no hubo resultados.",
+    "distractor_reasons": [],
+    "sources": [
+      "TOOL-RESULTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 8,
+    "option_order": [
+      1,
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "concept_id": "T04",
+    "domain": 2,
+    "task": "2.2",
+    "select": 1,
+    "stem_es": "Una herramienta MCP de Nexo deniega acceso y devuelve isError=true con category=permission y retryable=false. Un adaptador la incorpora a Messages API. ¿Qué salida mantiene el significado?",
+    "options_es": [
+      "tool_result con is_error=true y el contexto de permiso no reintentable.",
+      "tool_result con is_error=false porque la llamada HTTP llegó correctamente.",
+      "tool_result con isError=true, usando el mismo nombre de campo de MCP.",
+      "Una lista vacía exitosa para que el agente busque coincidencias alternativas."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Éxito del transporte no equivale a éxito de la herramienta. El adaptador transforma la interfaz y conserva la categoría de fallo; MCP isError no se copia como campo de Messages API.",
+    "distractor_reasons": [
+      "Marca éxito pese a la denegación de negocio.",
+      "Confunde campos de dos interfaces y puede perder el indicador esperado.",
+      "Una denegación no demuestra ausencia de coincidencias."
+    ],
+    "sources": [
+      "TOOL-RESULTS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 9,
+    "option_order": [
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "T05",
+    "domain": 2,
+    "task": "2.2",
+    "select": 2,
+    "stem_es": "Falla temporalmente una de tres fuentes de un especialista. Elige DOS medidas.",
+    "options_es": [
+      "Intentar recuperación local dentro del presupuesto acordado.",
+      "Si persiste, devolver lo conseguido, el fallo y sus intentos.",
+      "Declarar cobertura completa porque dos fuentes respondieron.",
+      "Repetir indefinidamente mientras el resto del sistema espera."
+    ],
+    "correct_original": [
+      0,
+      1
+    ],
+    "explanation_es": "Intentar recuperación transitoria acotada cerca del fallo y elevar lo no resuelto con intentos y resultados parciales. La política o autorización denegada requiere otra decisión, no reintentos idénticos. El coordinador necesita información para elegir una alternativa.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 10,
+    "option_order": [
+      0,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "concept_id": "T06",
+    "domain": 2,
+    "task": "2.3",
+    "select": 1,
+    "stem_es": "Archivo tiene dos extractores con esquemas distintos. No se sabe de antemano qué tipo de documento llega y se necesita que el modelo elija uno, no texto libre. ¿Qué configuración es apropiada para ese turno?",
+    "options_es": [
+      "tool_choice=any con descripciones y esquemas diferenciados.",
+      "Forzar siempre el extractor de cartas aunque puedan llegar facturas.",
+      "tool_choice=auto y asumir que siempre elegirá una herramienta.",
+      "Dar ambos esquemas como prosa y eliminar sus definiciones de herramientas."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "any exige alguna herramienta y deja elegir entre las disponibles. Sigue siendo necesario validar la selección y el contenido; no fuerza un extractor específico ni una secuencia completa.",
+    "distractor_reasons": [
+      "Impone un contrato que puede no corresponder al documento.",
+      "auto también puede devolver texto sin llamada.",
+      "Pierde la interfaz de extracción y su contrato ejecutable."
+    ],
+    "sources": [
+      "TOOLS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 47,
+    "option_order": [
+      0,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "concept_id": "T07",
+    "domain": 2,
+    "task": "2.3",
+    "select": 1,
+    "stem_es": "El redactor necesita confirmar fechas sencillas, pero no investigar temas nuevos. ¿Qué opción equilibra alcance y latencia?",
+    "options_es": [
+      "Una verificación de datos limitada y delegación para casos complejos.",
+      "Todas las herramientas de investigación y escritura sin restricciones.",
+      "Rehacer toda la investigación para cada fecha citada.",
+      "Permitirle inventar la fecha más probable para evitar rondas."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Dar a cada rol las capacidades que necesita. Si un especialista requiere verificaciones simples muy frecuentes, una herramienta limitada puede resolverlas localmente; la investigación compleja sigue la coordinación prevista. La excepción debe justificarse por evidencia de uso y límites.",
+    "distractor_reasons": [],
+    "sources": [
+      "TOOLS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 24,
+    "option_order": [
+      1,
+      0,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "T08",
+    "domain": 2,
+    "task": "2.4",
+    "select": 1,
+    "stem_es": "Archivo comparte un servidor MCP HTTP entre desarrolladores, cada uno con su token de entorno. ¿Qué entrada de proyecto es coherente con el cliente actual?",
+    "options_es": [
+      "type=http, url del servidor y referencia ${TOKEN} en el encabezado.",
+      "url sin type y el token personal del mantenedor escrito en el repositorio.",
+      "type=sdk dentro de .mcp.json como sustituto de un servidor HTTP remoto.",
+      "Configuración solo en el perfil del mantenedor y una instrucción para que otros la hereden."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "El ámbito compartido contiene la estructura, no el secreto literal. Un endpoint remoto necesita el tipo apropiado; sdk en ese archivo no registra por sí solo un servidor en proceso. La conexión y aprobación se verifican aparte.",
+    "distractor_reasons": [
+      "Mezcla un tipo ausente con una credencial personal expuesta.",
+      "Ese tipo requiere el host SDK correspondiente y no convierte el endpoint en un servidor en proceso.",
+      "La configuración privada no se distribuye automáticamente al equipo."
+    ],
+    "sources": [
+      "MCP-CODE",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 48,
+    "option_order": [
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "T09",
+    "domain": 2,
+    "task": "2.4",
+    "select": 1,
+    "stem_es": "El agente debe conocer qué manuales hay antes de buscar dentro de ellos. ¿Qué puede ayudar?",
+    "options_es": [
+      "Exponer un catálogo de contenido como recurso con metadatos útiles.",
+      "Forzar una modificación de cada manual para poder descubrirlo.",
+      "Sustituir permisos por el hecho de anunciar una herramienta.",
+      "Crear un servidor distinto por cada título de documento."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Un catálogo direccionable puede exponerse como resource; búsquedas y operaciones pueden necesitar tools. El host coordina clientes y servidores. El protocolo facilita intercambio, pero la aplicación y servicios conservan la responsabilidad de permisos y del uso del modelo.",
+    "distractor_reasons": [],
+    "sources": [
+      "MCP",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 25,
+    "option_order": [
+      1,
+      0,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "T10",
+    "domain": 2,
+    "task": "2.5",
+    "select": 1,
+    "stem_es": "Sin un índice estructural disponible, se buscan archivos terminados en .spec.ts. ¿Qué operación corresponde?",
+    "options_es": [
+      "Una búsqueda de rutas con un patrón como **/*.spec.ts.",
+      "Una búsqueda del texto literal .spec.ts dentro de cada archivo.",
+      "Una escritura de nombres candidatos en un archivo nuevo.",
+      "Una lectura completa de todos los documentos del repositorio."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Grep busca texto o patrones en el contenido, Glob selecciona rutas por nombre y Read obtiene contenido para inspección. Conviene orientar la búsqueda y después leer candidatos. En un proyecto con descubrimiento por grafo obligatorio se respeta primero esa regla y se usa texto como respaldo.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 33,
+    "option_order": [
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "concept_id": "T11",
+    "domain": 2,
+    "task": "2.5",
+    "select": 1,
+    "stem_es": "El ancla se repite en tres funciones y el archivo cambió. ¿Cuál es el siguiente paso?",
+    "options_es": [
+      "Leer el archivo actual y elegir contexto único antes de modificar.",
+      "Sustituir la primera aparición sin revisar a qué función pertenece.",
+      "Reescribir desde memoria descartando el contenido actual.",
+      "Dar por aplicada la edición porque la intención era correcta."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Volver a leer el estado actual, localizar un contexto inequívoco y editar sobre esa evidencia. Si se sustituye un archivo completo, preservar el contenido y cambios ajenos. No aplicar una modificación sobre líneas supuestas de una versión anterior.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 34,
+    "option_order": [
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "C01",
+    "domain": 3,
+    "task": "3.1",
+    "select": 1,
+    "stem_es": "Solo la autora del repositorio recibe una convención que guardó en su perfil. ¿Cómo compartirla?",
+    "options_es": [
+      "Mover la convención compartida a instrucciones versionadas de proyecto.",
+      "Pedir a los demás que recuerden preguntar en cada sesión.",
+      "Aumentar el límite de contexto sin cambiar el ámbito.",
+      "Guardar el texto en un archivo personal con un nombre más corto."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Puede que estén en un ámbito personal en lugar del proyecto. Las instrucciones compartidas deben versionarse donde el cliente las cargue para ese proyecto. Después hay que verificar los archivos realmente cargados y posibles instrucciones de ámbito más específico.",
+    "distractor_reasons": [],
+    "sources": [
+      "MEMORY",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 35,
+    "option_order": [
+      3,
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "concept_id": "C02",
+    "domain": 3,
+    "task": "3.1",
+    "select": 1,
+    "stem_es": "Orion tiene una regla importada en el CLAUDE.md de proyecto y otra versión en un paquete. Un compañero observa conducta distinta. ¿Qué diagnóstico produce evidencia útil?",
+    "options_es": [
+      "Inspeccionar archivos cargados, ámbito, imports y rutas realmente editadas.",
+      "Comparar solo el texto del CLAUDE.md raíz sin mirar las reglas del paquete.",
+      "Copiar todo al perfil personal del compañero y asumir que se resolvió el ámbito.",
+      "Pedir al modelo que confirme que conoce todas las convenciones del repositorio."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La conducta puede depender de qué archivos se cargaron y dónde se trabajó. La existencia o el contenido de un archivo aislado no demuestran la composición de contexto de la sesión.",
+    "distractor_reasons": [
+      "Omite capas más específicas y carga real.",
+      "Puede ocultar la causa y no deja una solución compartida reproducible.",
+      "La autodeclaración del modelo no sustituye la observación del contexto."
+    ],
+    "sources": [
+      "MEMORY",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 36,
+    "option_order": [
+      2,
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "concept_id": "C03",
+    "domain": 3,
+    "task": "3.2",
+    "select": 1,
+    "stem_es": "El equipo quiere invocar una revisión de accesibilidad específica sin cargar todo su procedimiento en cada sesión. ¿Qué encaja?",
+    "options_es": [
+      "Una skill de proyecto con instrucciones y herramientas apropiadas.",
+      "Copiar el procedimiento completo a cada prompt de cualquier tarea.",
+      "Guardarlo solo en el historial privado del autor.",
+      "Convertir todos los documentos del proyecto en instrucciones universales."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Una regla que debe acompañar el trabajo habitual encaja en instrucciones de proyecto. Un procedimiento específico invocable bajo demanda encaja en una skill. El ámbito determina si es personal o compartido. La guía también incluye comandos personalizados; contrastar su relación con skills en la versión actual.",
+    "distractor_reasons": [],
+    "sources": [
+      "SKILLS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 37,
+    "option_order": [
+      1,
+      3,
+      2,
+      0
+    ]
+  },
+  {
+    "concept_id": "C04",
+    "domain": 3,
+    "task": "3.2",
+    "select": 2,
+    "stem_es": "Una skill de Orion usa context: fork y allowed-tools: Read, Grep, Glob. Según la documentación archivada en noviembre, elige DOS afirmaciones correctas.",
+    "options_es": [
+      "El fork separa contexto; no demuestra por sí solo un entorno sin escritura.",
+      "allowed-tools preaprueba; hay que aplicar restricciones reales si se deben quitar capacidades.",
+      "allowed-tools elimina automáticamente todas las herramientas no enumeradas.",
+      "La ausencia de Write en allowed-tools bloquea también toda vía indirecta de modificación."
+    ],
+    "correct_original": [
+      0,
+      1
+    ],
+    "explanation_es": "La captura de noviembre distingue preaprobación de disponibilidad. La guía de julio usa otra descripción, que se conserva como diferencia de versión. Restricción de herramientas y autorización externa deben verificarse con mecanismos adecuados.",
+    "distractor_reasons": [
+      "La documentación actual dice explícitamente que no restringe el pool.",
+      "No demuestra el bloqueo de otras herramientas o acciones indirectas."
+    ],
+    "sources": [
+      "SKILLS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 38,
+    "option_order": [
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  {
+    "concept_id": "C05",
+    "domain": 3,
+    "task": "3.3",
+    "select": 1,
+    "stem_es": "La misma regla debe aplicarse a archivos *.test.ts dispersos en varios paquetes. ¿Qué conviene?",
+    "options_es": [
+      "Una regla por paths que cubra **/*.test.ts.",
+      "Un archivo personal que mencione solo el primer paquete.",
+      "Una regla de despliegue global para cualquier archivo.",
+      "Duplicar toda la documentación en cada archivo de prueba."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Cuando una convención se aplica a un conjunto de archivos identificable por patrón, incluso si están en carpetas distintas. El frontmatter paths debe expresar ese alcance. Una regla sin condición adecuada puede cargar donde no corresponde o no aplicarse a los archivos esperados.",
+    "distractor_reasons": [],
+    "sources": [
+      "MEMORY",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 39,
+    "option_order": [
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  {
+    "concept_id": "C06",
+    "domain": 3,
+    "task": "3.3",
+    "select": 1,
+    "stem_es": "Una regla de tests termina cargando al editar configuración de producción. ¿Qué se revisa?",
+    "options_es": [
+      "El patrón y ámbito, usando casos incluidos y excluidos.",
+      "Solo la severidad del texto de la regla.",
+      "El número de veces que se repite la palabra test.",
+      "El historial de una sesión que no tocó esos archivos."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Probar archivos que deben coincidir y archivos que deben quedar fuera, e inspeccionar la carga real. Un patrón plausible no prueba la intención. Las reglas heredadas por carpeta y los patrones transversales tienen alcances distintos y se eligen según la distribución del código.",
+    "distractor_reasons": [],
+    "sources": [
+      "MEMORY",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 40,
+    "option_order": [
+      3,
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "concept_id": "C07",
+    "domain": 3,
+    "task": "3.4",
+    "select": 1,
+    "stem_es": "Orion debe cambiar seis líneas de un contrato compartido por muchos consumidores, con dos estrategias de compatibilidad. ¿Qué justifica investigar antes de ejecutar?",
+    "options_es": [
+      "Las dependencias y la decisión de compatibilidad, aunque el diff sea pequeño.",
+      "Solo el número de líneas; seis líneas siempre requieren ejecución directa.",
+      "Que una de las estrategias tenga menos código, sin revisar consumidores.",
+      "Planificar únicamente después de aplicar el cambio para documentar lo ocurrido."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La necesidad de plan depende de incertidumbre, contratos y efectos, no del tamaño del diff. Primero contrastar alternativas y consumidores permite una secuencia verificable.",
+    "distractor_reasons": [
+      "El tamaño no mide el alcance semántico de un contrato.",
+      "Menos código no garantiza compatibilidad con requisitos y consumidores.",
+      "Documentar después no sustituye decidir antes de un cambio con dependencias."
+    ],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 41,
+    "option_order": [
+      1,
+      2,
+      0,
+      3
+    ]
+  },
+  {
+    "concept_id": "C08",
+    "domain": 3,
+    "task": "3.4",
+    "select": 1,
+    "stem_es": "El análisis de una migración agota contexto antes de llegar a las decisiones. ¿Qué cambio ayuda?",
+    "options_es": [
+      "Delegar preguntas concretas y traer resúmenes verificables con referencias.",
+      "Aumentar el detalle narrativo de cada búsqueda sin cambiar el alcance.",
+      "Omitir las referencias para que los resúmenes sean más cortos.",
+      "Dar por terminada la investigación cuando se llena la ventana."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Investigar preguntas delimitadas, usar resultados estructurados y resumir hallazgos antes de la siguiente fase. Un especialista de exploración puede aislar salidas voluminosas. El coordinador conserva las decisiones y referencias; no necesita todas las trazas crudas en cada turno.",
+    "distractor_reasons": [],
+    "sources": [
+      "SUBAGENTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 26,
+    "option_order": [
+      0,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "concept_id": "C09",
+    "domain": 3,
+    "task": "3.5",
+    "select": 1,
+    "stem_es": "Una migración trata null y cadena vacía como lo mismo, pero el producto los distingue. ¿Qué aporta más?",
+    "options_es": [
+      "Ejemplos y comprobaciones con ambos valores y sus salidas esperadas.",
+      "Pedir más creatividad al modelo para resolver la ambigüedad.",
+      "Eliminar los datos vacíos de las pruebas para evitar fallos.",
+      "Cambiar solo el nombre de la función sin definir comportamiento."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Ejemplos concretos de entrada y salida esperada que aclaren la distinción problemática, más casos de borde. Un fallo reproducible permite contrastar el cambio. Los ejemplos deben enseñar el criterio, no solo una apariencia que se pueda copiar sin comprender.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 49,
+    "option_order": [
+      2,
+      1,
+      0,
+      3
+    ]
+  },
+  {
+    "concept_id": "C10",
+    "domain": 3,
+    "task": "3.5",
+    "select": 1,
+    "stem_es": "Una corrección de caché arregla datos antiguos pero rompe invalidación. ¿Qué debe incluir la siguiente iteración?",
+    "options_es": [
+      "Ambos comportamientos, su relación y pruebas de la invariancia requerida.",
+      "Solo el último síntoma, omitiendo la corrección previa.",
+      "Una solicitud de hacer pasar pruebas reduciendo su cobertura.",
+      "Cambios de estilo para hacer más legible el informe del error."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Explicar los síntomas, su relación y los criterios conjuntos ayuda a evitar arreglos incompatibles. Para problemas independientes conviene separar cambios y verificación. Conservar pruebas valiosas y compartir fallos específicos resulta más informativo que una afirmación genérica de que nada funciona.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 50,
+    "option_order": [
+      0,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "concept_id": "C11",
+    "domain": 3,
+    "task": "3.6",
+    "select": 1,
+    "stem_es": "Orion necesita un job no interactivo y hallazgos que otro proceso interprete. ¿Qué combinación de decisiones corresponde al patrón estudiado?",
+    "options_es": [
+      "Usar -p, contrato estructurado y comprobar envoltura, errores y resultado del proceso.",
+      "Usar -p y publicar el primer texto que aparezca sin validar su tipo de resultado.",
+      "Usar modo interactivo con un prompt que pida no hacer preguntas nunca.",
+      "Usar --output-format json como prueba suficiente de que no hubo fallos ni rechazos."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "El modo no interactivo resuelve la espera de interacción; la salida estructurada facilita consumo, pero el consumidor debe verificar también la envoltura y estados de error. Ninguna bandera prueba por sí sola corrección del hallazgo.",
+    "distractor_reasons": [
+      "Aparición de texto no prueba finalización ni contrato correcto.",
+      "Una instrucción no sustituye el modo de ejecución apropiado.",
+      "JSON puede describir un error o un resultado incompleto."
+    ],
+    "sources": [
+      "CLI",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 42,
+    "option_order": [
+      0,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "concept_id": "C12",
+    "domain": 3,
+    "task": "3.6",
+    "select": 1,
+    "stem_es": "Tras cada commit se publican los mismos problemas ya corregidos. ¿Qué contexto falta?",
+    "options_es": [
+      "Hallazgos previos, su estado y los cambios que se están reevaluando.",
+      "Un prompt más largo sobre el estilo de los comentarios.",
+      "Todos los repositorios de la organización sin seleccionar cambios.",
+      "Una instrucción de ocultar cualquier hallazgo repetido aunque siga abierto."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Aportar hallazgos previos, commits nuevos y estado de resolución para reportar lo nuevo o aún pendiente. Para tests, dar casos y fixtures existentes y criterios de valor. Filtrar por coincidencia de texto no basta si el mismo problema cambia de redacción o ubicación.",
+    "distractor_reasons": [],
+    "sources": [
+      "CLI",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 43,
+    "option_order": [
+      2,
+      1,
+      0,
+      3
+    ]
+  },
+  {
+    "concept_id": "P01",
+    "domain": 4,
+    "task": "4.1",
+    "select": 1,
+    "stem_es": "Un revisor mezcla cambios de estilo con errores que rompen el flujo. ¿Qué conviene ajustar primero?",
+    "options_es": [
+      "Criterios de inclusión y severidad con ejemplos contrastados.",
+      "El número máximo de comentarios sin aclarar su significado.",
+      "La temperatura como único control de falsos positivos.",
+      "Un requisito de que todo comentario suene muy seguro."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Definir problemas reportables, condiciones de severidad, evidencia necesaria y qué queda fuera. Un umbral subjetivo de confianza no reemplaza una definición del defecto. Los hallazgos deben indicar comportamiento afectado y una acción concreta, con lugar comprobable.",
+    "distractor_reasons": [],
+    "sources": [
+      "PROMPTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 11,
+    "option_order": [
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "P02",
+    "domain": 4,
+    "task": "4.1",
+    "select": 1,
+    "stem_es": "Una regla de estilo reporta errores falsos y los desarrolladores ignoran el informe completo. ¿Qué enfoque ayuda?",
+    "options_es": [
+      "Aislar esa categoría, refinarla y validar antes de reactivarla.",
+      "Eliminar también las comprobaciones de errores funcionales reales.",
+      "Publicar más comentarios para que alguno sea útil.",
+      "Aprobar la categoría solo porque el modelo declara alta confianza."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Medir los patrones de error y mejorar criterios y ejemplos para esa categoría. Puede desactivarse temporalmente su publicación mientras se corrige, con evaluación antes de reintroducirla. Esto no equivale a ocultar defectos de otras categorías ni a debilitar pruebas para aparentar calidad.",
+    "distractor_reasons": [],
+    "sources": [
+      "PROMPTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 44,
+    "option_order": [
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  {
+    "concept_id": "P03",
+    "domain": 4,
+    "task": "4.2",
+    "select": 1,
+    "stem_es": "Archivo extrae fechas exactas. Falla con estaciones del año y documentos contradictorios, aunque acierta fechas ISO explícitas. ¿Qué conjunto few-shot aporta más?",
+    "options_es": [
+      "Fecha exacta, periodo aproximado y conflicto, con salida y razón de cada decisión.",
+      "Tres fechas ISO de meses distintos, todas con el mismo resultado correcto.",
+      "Los documentos que ya pasaron, sin incluir la salida esperada para evitar sesgo.",
+      "Una lista exhaustiva de años posibles sin mostrar cómo decidir ante falta de evidencia."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Los ejemplos deben enseñar las fronteras que producen errores. Cambiar solo valores de un caso ya resuelto no demuestra la diferencia entre exactitud, aproximación y contradicción.",
+    "distractor_reasons": [
+      "No cubre los casos que motivan el cambio.",
+      "Sin salida y criterio no enseña la distinción requerida.",
+      "Una lista de valores no resuelve la evidencia ni el formato de decisión."
+    ],
+    "sources": [
+      "PROMPTS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 51,
+    "option_order": [
+      0,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "concept_id": "P04",
+    "domain": 4,
+    "task": "4.2",
+    "select": 2,
+    "stem_es": "La extracción funciona en los dos documentos de demostración. Elige DOS pasos útiles.",
+    "options_es": [
+      "Incluir ejemplos que expliquen el caso ambiguo relevante.",
+      "Evaluar documentos de estructura distinta no usados al ajustar.",
+      "Dar por concluida la validación con los documentos de demostración.",
+      "Exigir la misma redacción aunque cambie el contenido de origen."
+    ],
+    "correct_original": [
+      0,
+      1
+    ],
+    "explanation_es": "Mostrar la distinción relevante y evaluar casos nuevos que cambien datos o estructura conservando el criterio. Los ejemplos deben cubrir formatos representativos. Obtener el mismo JSON en los ejemplos entrenados no prueba que el modelo extraiga bien un documento distinto.",
+    "distractor_reasons": [],
+    "sources": [
+      "PROMPTS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 52,
+    "option_order": [
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "P05",
+    "domain": 4,
+    "task": "4.3",
+    "select": 1,
+    "stem_es": "El consumidor de Archivo exige siempre la clave exactDate, pero puede ser desconocida. ¿Qué fragmento expresa mejor ese contrato?",
+    "options_es": [
+      "required incluye exactDate y su type admite string y null.",
+      "exactDate es opcional con type string; el consumidor supone que siempre existe.",
+      "required incluye exactDate de type string y se usa una fecha por defecto si falta evidencia.",
+      "Se elimina exactDate del esquema y se pide su presencia solo en el prompt."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La presencia de la clave y el conocimiento de su valor son dimensiones distintas. Required más nullable conserva la estructura sin exigir un dato fabricado; después se valida evidencia y formato.",
+    "distractor_reasons": [
+      "Una propiedad opcional no satisface la presencia obligatoria del consumidor.",
+      "Un valor por defecto no representa la fecha de la fuente.",
+      "La instrucción no reemplaza el contrato que se quiere validar."
+    ],
+    "sources": [
+      "STRUCTURED",
+      "TOOLS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 53,
+    "option_order": [
+      0,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "concept_id": "P06",
+    "domain": 4,
+    "task": "4.3",
+    "select": 1,
+    "stem_es": "El JSON de una factura es válido, pero el importe no está en la fuente. ¿Qué procede?",
+    "options_es": [
+      "Rechazar o revisar ese dato mediante validación de evidencia y negocio.",
+      "Aceptar el importe porque el parser no falló.",
+      "Cambiar el nombre del campo a importe_verificado.",
+      "Repetir el mismo esquema esperando que eso pruebe el dato."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Restringen estructura y tipos bajo la interfaz y sus limitaciones. No prueban que los valores estén sustentados ni que la operación esté autorizada. Contrastar fuente y reglas semánticas, y manejar rechazos y salidas incompletas antes de consumir el objeto.",
+    "distractor_reasons": [],
+    "sources": [
+      "STRUCTURED",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 54,
+    "option_order": [
+      1,
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "concept_id": "P07",
+    "domain": 4,
+    "task": "4.4",
+    "select": 1,
+    "stem_es": "El validador exige normalizar una fecha que sí aparece en el documento. ¿Qué entrada ayuda al siguiente intento?",
+    "options_es": [
+      "Fuente, extracción anterior y explicación precisa del formato inválido.",
+      "Solo «respuesta incorrecta», sin el documento ni el valor fallido.",
+      "Un documento inventado que ya cumpla el esquema.",
+      "La misma salida anterior tratada como ejemplo correcto."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "El documento original, la salida que falló y errores de validación concretos. Si el dato existe pero su formato es incorrecto, la corrección puede servir. Si falta la fuente necesaria, se debe obtener evidencia o reconocer desconocimiento; repetir no recupera información inexistente.",
+    "distractor_reasons": [],
+    "sources": [
+      "STRUCTURED",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 55,
+    "option_order": [
+      0,
+      1,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "P08",
+    "domain": 4,
+    "task": "4.4",
+    "select": 1,
+    "stem_es": "La suma de partidas y el total impreso difieren. ¿Qué salida sirve para revisión?",
+    "options_es": [
+      "Ambos valores, indicador de conflicto y referencias a la evidencia.",
+      "Solo el valor que el modelo considera más razonable.",
+      "Un promedio de ambos como si fuera el total declarado.",
+      "Un total nulo sin explicar la contradicción encontrada."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Conservar valores originales, cálculo o evidencia alternativa y una marca de conflicto con procedencia. Esto permite revisar la causa. Corregir silenciosamente un valor puede borrar información relevante y confundir al consumidor sobre qué decía realmente el documento.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 56,
+    "option_order": [
+      2,
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "concept_id": "P09",
+    "domain": 4,
+    "task": "4.5",
+    "select": 1,
+    "stem_es": "Archivo recibe documentos continuamente. SLA: 27 h desde llegada; se reservan 24 h de ventana de lote y 0.5 h de recogida/validación. ¿Qué frecuencia cabe en ese presupuesto de peor espera?",
+    "options_es": [
+      "Cada 2 h; la reserva total máxima sería 26.5 h.",
+      "Cada 3 h; la reserva total máxima sería 27.5 h.",
+      "Cada 4 h; basta con que la mediana observada sea inferior a 24 h.",
+      "Cada 5 h; se puede excluir del SLA la espera antes del envío."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La espera máxima presupuestada es 27 - 24 - 0.5 = 2.5 h. Un intervalo de 2 h cabe; los otros superan la reserva o cambian el requisito. La aritmética reserva una ventana, no garantiza éxito del servicio.",
+    "distractor_reasons": [
+      "27.5 h supera el SLA fijado.",
+      "Una mediana no sustituye la ventana que el caso exige presupuestar.",
+      "El SLA empieza en la llegada, no solo al enviar el lote."
+    ],
+    "sources": [
+      "BATCH",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 57,
+    "option_order": [
+      2,
+      1,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "P10",
+    "domain": 4,
+    "task": "4.5",
+    "select": 1,
+    "stem_es": "Archivo conserva 93 éxitos; tres fallos excedieron contexto, dos fueron transitorios y dos carecen de una fuente externa necesaria. ¿Qué recuperación respeta evidencia y evita trabajo inútil?",
+    "options_es": [
+      "Conservar éxitos, adaptar los tres grandes, reintentar transitorios y obtener las dos fuentes ausentes.",
+      "Reenviar los siete fallos idénticos hasta que todos produzcan una respuesta válida.",
+      "Reenviar los cien documentos con un esquema más permisivo para reducir errores.",
+      "Marcar los dos sin fuente como null correcto y cerrar su revisión sin señalar la ausencia."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "No todos los fallos comparten causa. custom_id permite conservar éxitos y decidir por documento. Una fuente ausente requiere evidencia nueva; un esquema permisivo no la sustituye.",
+    "distractor_reasons": [
+      "No cambia la causa de tamaño o evidencia ausente.",
+      "Reprocesa éxitos y debilita el contrato sin resolver las causas.",
+      "Un desconocido puede ser válido según contrato, pero debe conservarse la laguna y seguir el procedimiento requerido."
+    ],
+    "sources": [
+      "BATCH",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 58,
+    "option_order": [
+      1,
+      2,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "P11",
+    "domain": 4,
+    "task": "4.6",
+    "select": 1,
+    "stem_es": "Se quiere una segunda opinión sobre código generado. ¿Qué entrada favorece una revisión independiente?",
+    "options_es": [
+      "Requisitos, cambio y pruebas relevantes, sin la defensa del generador.",
+      "Solo el texto que explica por qué el generador cree tener razón.",
+      "Una afirmación de que el cambio ya fue aprobado.",
+      "Una lista de conclusiones que el revisor debe repetir."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Un revisor independiente puede contrastar requisitos y artefacto sin heredar la justificación persuasiva del generador. Debe recibir evidencia suficiente, no empezar a ciegas. La independencia reduce un sesgo posible, pero no garantiza detección completa ni elimina comprobaciones.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 45,
+    "option_order": [
+      1,
+      0,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "P12",
+    "domain": 4,
+    "task": "4.6",
+    "select": 1,
+    "stem_es": "Dos revisores coinciden en una alerta sin ejemplo que la reproduzca. ¿Qué falta para actuar con fundamento?",
+    "options_es": [
+      "Comprobar evidencia y efecto del defecto con un caso concreto.",
+      "Sumar sus porcentajes de confianza para superar un umbral.",
+      "Considerar la coincidencia una prueba suficiente de severidad.",
+      "Exigir que sus mensajes sean idénticos palabra por palabra."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Puede ayudar a priorizar verificación si se contrasta con datos etiquetados y evidencia. Las pasadas locales e integración cubren problemas distintos. La coincidencia literal entre revisores no es una prueba general de corrección y puede suprimir hallazgos reales poco frecuentes.",
+    "distractor_reasons": [],
+    "sources": [
+      "EVALS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 27,
+    "option_order": [
+      3,
+      0,
+      2,
+      1
+    ]
+  },
+  {
+    "concept_id": "R01",
+    "domain": 5,
+    "task": "5.1",
+    "select": 1,
+    "stem_es": "La compresión omite el importe acordado y el identificador del caso. ¿Qué diseño reduce ese riesgo?",
+    "options_es": [
+      "Un bloque persistente de hechos críticos separado del resumen narrativo.",
+      "Un resumen que conserve solo las frases más recientes.",
+      "Un modelo más seguro de sí mismo sin cambiar el contexto.",
+      "Eliminar los resultados de herramientas al terminar cada vuelta."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Objetivo, restricciones, hechos críticos, decisiones, fuentes, estado comprobado y trabajo pendiente. Datos como identificadores, cantidades y fechas pueden conservarse en un bloque estructurado separado. El resumen debe mantener incertidumbres y permitir recuperar la evidencia original.",
+    "distractor_reasons": [],
+    "sources": [
+      "CONTEXT",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 12,
+    "option_order": [
+      1,
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "concept_id": "R02",
+    "domain": 5,
+    "task": "5.1",
+    "select": 1,
+    "stem_es": "Cada consulta añade miles de campos irrelevantes al caso. ¿Qué intervención mejora el contexto?",
+    "options_es": [
+      "Normalizar a hechos pertinentes con identificadores y evidencia recuperable.",
+      "Duplicar las respuestas completas al principio y al final de cada turno.",
+      "Suprimir todas las fechas porque ocupan espacio.",
+      "Guardar solo una conclusión sin permitir volver a la fuente."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Seleccionar campos relevantes y conservar referencias estables, fuente y fecha cuando importen. Un resumen inicial y secciones claras orientan la síntesis. El detalle puede recuperarse bajo demanda; no se deben eliminar conflictos o límites para que la salida parezca completa.",
+    "distractor_reasons": [],
+    "sources": [
+      "CONTEXT",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 13,
+    "option_order": [
+      2,
+      1,
+      0,
+      3
+    ]
+  },
+  {
+    "concept_id": "R03",
+    "domain": 5,
+    "task": "5.2",
+    "select": 1,
+    "stem_es": "La persona dice «quiero hablar con una persona ahora». ¿Qué debe priorizar el flujo?",
+    "options_es": [
+      "El traspaso previsto con contexto suficiente para el operador.",
+      "Investigar primero todos los problemas aunque no lo solicite.",
+      "Repetir que el agente automatizado también puede ayudar hasta convencerla.",
+      "Cerrar el caso porque la solicitud no contiene un error técnico."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Respetar la preferencia y realizar el handoff previsto sin obligar al usuario a agotar una investigación automática. Esto se distingue de una expresión de frustración sin esa petición, donde se puede ofrecer ayuda dentro de capacidad y política. El criterio debe ser explícito.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 14,
+    "option_order": [
+      1,
+      0,
+      3,
+      2
+    ]
+  },
+  {
+    "concept_id": "R04",
+    "domain": 5,
+    "task": "5.2",
+    "select": 1,
+    "stem_es": "Dos cuentas tienen el mismo nombre y la operación afecta su saldo. ¿Cuál es el siguiente paso?",
+    "options_es": [
+      "Solicitar un identificador que distinga la cuenta antes de actuar.",
+      "Usar la cuenta más antigua porque parece más probable.",
+      "Elegir la de mayor saldo para poder completar el flujo.",
+      "Actuar sobre ambas y corregir después si alguien reclama."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Pedir un identificador adicional para resolver coincidencias ambiguas y escalar lagunas de política según el procedimiento. No escoger a una persona por probabilidad ni inventar una regla. La siguiente acción depende del tipo de incertidumbre, no de una instrucción genérica de ser autónomo.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 15,
+    "option_order": [
+      1,
+      3,
+      0,
+      2
+    ]
+  },
+  {
+    "concept_id": "R05",
+    "domain": 5,
+    "task": "5.3",
+    "select": 1,
+    "stem_es": "Una revisión encuentra evidencia en dos repositorios y no pudo consultar un tercero. ¿Qué informe es correcto?",
+    "options_es": [
+      "Hallazgos atribuidos y una limitación explícita sobre el repositorio no consultado.",
+      "Conclusión de que el tercero no contiene nada relevante.",
+      "Un informe sin límites para que el lector no pierda confianza.",
+      "Una mezcla de hechos verificados y conjeturas sin distinguirlos."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Conservar resultados verificados y declarar la laguna, causa e intentos realizados. El coordinador puede elegir una alternativa o presentar un resultado parcial. Una fuente que no pudo consultarse no demuestra que no exista información en ella.",
+    "distractor_reasons": [],
+    "sources": [
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 28,
+    "option_order": [
+      3,
+      1,
+      2,
+      0
+    ]
+  },
+  {
+    "concept_id": "R06",
+    "domain": 5,
+    "task": "5.4",
+    "select": 1,
+    "stem_es": "Un manifiesto guardado ayer dice que una tarea sigue activa. ¿Qué debe verificarse antes de continuar?",
+    "options_es": [
+      "El estado actual de archivos y procesos, conservando lo comprobado y pendiente.",
+      "Nada: el estado escrito debe considerarse autoritativo para siempre.",
+      "Que el resumen tenga suficiente longitud narrativa.",
+      "Que el modelo recuerde el nombre del especialista."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Un estado estructurado con objetivo, hallazgos, referencias, tareas completadas y pendientes, además de la revalidación del estado real al continuar. Un archivo de progreso ayuda, pero no prueba que un proceso siga ejecutándose. Los especialistas necesitan el contexto explícito al reanudarse.",
+    "distractor_reasons": [],
+    "sources": [
+      "CONTEXT",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 29,
+    "option_order": [
+      3,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "concept_id": "R07",
+    "domain": 5,
+    "task": "5.5",
+    "select": 1,
+    "stem_es": "En Archivo, la alta confianza acierta 20/24 formularios y 4/8 cartas. ¿Qué conclusión guía mejor la revisión?",
+    "options_es": [
+      "Medir y ajustar por segmento; las cartas requieren atención aunque el promedio parezca aceptable.",
+      "Usar solo 24/32 global para reducir revisión de ambos segmentos por igual.",
+      "Tomar la confianza emitida como probabilidad calibrada y omitir los resultados etiquetados.",
+      "Eliminar las cartas de la evaluación para comparar solo formatos homogéneos."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "La precisión observada es aproximadamente 83.3% en formularios y 50% en cartas; el promedio oculta esa diferencia. Los umbrales necesitan datos etiquetados y cobertura del segmento real, con muestreo de alta confianza.",
+    "distractor_reasons": [
+      "La media no demuestra calidad uniforme.",
+      "Confianza declarada y precisión empírica son conceptos distintos.",
+      "Excluye parte del uso que la evaluación debe representar."
+    ],
+    "sources": [
+      "EVALS",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 59,
+    "option_order": [
+      2,
+      1,
+      3,
+      0
+    ]
+  },
+  {
+    "concept_id": "R08",
+    "domain": 5,
+    "task": "5.5",
+    "select": 2,
+    "stem_es": "La cola humana contiene solo baja confianza. Elige DOS mejoras para medir la parte automatizada.",
+    "options_es": [
+      "Muestrear aleatoriamente alta confianza dentro de segmentos relevantes.",
+      "Comparar precisión por tipo de documento y campo.",
+      "Asumir que los no revisados son correctos por definición.",
+      "Seleccionar solo los documentos de formato más limpio."
+    ],
+    "correct_original": [
+      0,
+      1
+    ],
+    "explanation_es": "Porque pueden contener errores sistemáticos no detectados por el propio modelo. Muestrear por estratos relevantes permite estimar error y encontrar patrones nuevos, mientras se prioriza revisión completa de casos de baja confianza o contradicción. No debe inferirse precisión de los casos que se eligieron por conveniencia.",
+    "distractor_reasons": [],
+    "sources": [
+      "EVALS",
+      "GUIA"
+    ],
+    "strengthened": false,
+    "number": 60,
+    "option_order": [
+      2,
+      0,
+      3,
+      1
+    ]
+  },
+  {
+    "concept_id": "R09",
+    "domain": 5,
+    "task": "5.6",
+    "select": 1,
+    "stem_es": "Lumen compara una publicación de hoy con datos de 2020 y otra de ayer con mediciones de 2026. Los métodos difieren. ¿Cómo evitar una síntesis engañosa?",
+    "options_es": [
+      "Conservar periodo, método y fuente de cada cifra antes de decidir comparabilidad.",
+      "Elegir la publicada hoy por ser la publicación más reciente de las dos.",
+      "Elegir la que llegó al final de la búsqueda para mantener un orden reproducible.",
+      "Calcular una media única y conservar solo las referencias bibliográficas al final."
+    ],
+    "correct_original": [
+      0
+    ],
+    "explanation_es": "Publicación, medición y recuperación tienen fechas distintas. Una síntesis útil preserva esas dimensiones y la metodología, y explica cuándo los valores no son comparables.",
+    "distractor_reasons": [
+      "La fecha de publicación no identifica el periodo medido.",
+      "El orden de recuperación no aporta autoridad sobre el hecho.",
+      "Una media puede mezclar medidas incompatibles y borrar su relación con fuentes concretas."
+    ],
+    "sources": [
+      "CONTEXT",
+      "GUIA"
+    ],
+    "strengthened": true,
+    "number": 30,
+    "option_order": [
+      0,
+      2,
+      3,
+      1
+    ]
+  }
+]

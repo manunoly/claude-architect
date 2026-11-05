@@ -1,0 +1,32 @@
+{
+  "sources": {
+    "downloaded": 407,
+    "unavailable": 0,
+    "bytes": 87112411,
+    "integrity_errors": [],
+    "by_kind": {
+      "course-page": 6,
+      "markdown": 387,
+      "full-corpus": 3,
+      "html": 6,
+      "pdf": 1,
+      "index": 3,
+      "json": 1
+    }
+  },
+  "author_link_errors": [],
+  "bank_items": 60,
+  "control_items": 60,
+  "unique_bank_ids": 60,
+  "blueprint_tasks": 30,
+  "missing_tasks": [],
+  "domain_distribution": {
+    "1": 16,
+    "2": 11,
+    "3": 12,
+    "4": 12,
+    "5": 9
+  },
+  "hours": 60,
+  "sessions": 20
+}

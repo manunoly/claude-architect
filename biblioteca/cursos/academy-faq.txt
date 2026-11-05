@@ -1,0 +1,314 @@
+FAQ · Claude Academy
+
+Claude Academy
+
+Explore
+
+
+Resources
+
+
+
+
+Search
+
+Loading
+
+
+
+Explore
+
+
+Resources
+
+
+Browse
+
+
+
+
+
+Academy
+
+
+
+Academy
+
+Frequently asked questions
+
+Answers to common questions about Claude Academy: signing in, moving from Skilljar, badges and certificates, courses, and your data.
+
+Sign-in and access
+
+Migrating from Skilljar
+
+Completion badges
+
+Courses and progress
+
+Personal courses and your organization
+
+Emails and notifications
+
+Privacy and data
+
+The “Claude in Academy” setting, for organization admins
+
+Org reports, for organization admins
+
+Content and licensing
+
+Learning through your company or Anthropic’s partner program
+
+Sign-in and access
+
+Why can’t I sign in?
+
+Academy signs you in with your Claude account: click “Sign in”, authorize at claude.ai, and you’re back. Two common issues: (1) if you don’t have a Claude account yet, create one first at claude.ai; (2) if you have multiple Claude accounts or organizations, Academy connects to the one you’re signed in to at claude.ai when you authorize. Sign out of claude.ai, sign back in with the account you want, and try again.
+
+Why is Academy a separate site from Claude? Why do I have to sign in again?
+
+Academy lives at its own address, so signing in is a quick one-time authorization: we send you to claude.ai, you approve, and you’re back. Your Academy identity is your Claude account; there’s nothing separate to manage.
+
+I signed in with my company’s SSO, but Academy shows my personal account
+
+Academy links your learning to the Claude account, and the organization inside it, that was active when you authorized. If that was a personal account, your enrollments were recorded there. To get company-attributed learning going forward: sign out of claude.ai, sign back in through your company’s SSO, then re-authorize Academy. Enrollments and progress on the personal account stay there. If that personal account uses the same email address as your company sign-in, you can move those courses to your organization once you’re signed in with your organization, from Your learning or the course’s page. Courses can’t be moved between Claude accounts with different email addresses.
+
+What is Claude Academy? Is it free? Do I need a paid plan or a work account?
+
+Claude Academy is Anthropic’s home for learning, with structured courses and tutorials on AI and Claude. It’s free: you can browse the catalog without signing in at all, and signing in with a free Claude account is what saves your progress and lets you earn completion badges. You don’t need a paid plan, and you don’t need a work account. A personal Claude account works.
+
+Academy says I haven’t been added to my organization yet
+
+That message means your Claude account isn’t attached to your organization’s Academy access yet. It isn’t something you can fix from Academy. Ask your organization’s Claude admin to add you. Once they have, sign out of claude.ai, sign back in, and re-authorize Academy.
+
+Migrating from Skilljar
+
+What’s happening to anthropic.skilljar.com, and when?
+
+Our old course site, anthropic.skilljar.com, closes in early December. After that you won’t be able to sign in, see your history, or download certificates there. Before then, import your history into Claude Academy and save any certificate PDFs you want.
+
+How do I bring my Skilljar progress over to Claude Academy?
+
+Sign in here with a Claude account that uses the same email you used on anthropic.skilljar.com (you can create a free one). Then use the “Import your Skilljar progress” banner on Your learning, or the same option in Settings.
+
+What carries over from Skilljar, and what doesn’t?
+
+Nearly all your courses and all your certificates carry over, and certificates appear here as completion badges with their original dates. Your place inside an unfinished course doesn’t carry over. Start it again here, or finish it on the old site at least two days before it closes, and it will show as completed here, even if you’ve already imported.
+
+I used anthropic.skilljar.com, but I don’t see the import banner
+
+The banner appears only when there’s course activity under your Claude account’s email. Activity on the old site can take up to two days to show up. If your emails match and it’s still missing from Your learning and Settings after that, use the support messenger in the corner of the page. If you’ve already imported, the banner doesn’t come back, and your courses are on Your learning.
+
+My Skilljar email is different from my Claude account email. Can you move my history across?
+
+No. The import only works when the two emails match, and we can’t merge history across emails. You can create a free Claude account with your Skilljar email and import there, or pass the course quizzes here to earn the badges again.
+
+I’m leaving my company. Can you transfer my learning to a new email address?
+
+Academy learning is attached to your Claude account rather than an email address, so there’s no transfer option today. If your history is on your personal Claude account, it stays with you when you change jobs. If it’s on a company-managed account you’re losing access to, we can’t move it, because account merging across different emails isn’t supported. We know that’s painful. Completion badges you’ve shared can still be verified at their public links.
+
+My company’s email domain was allowlisted for partner access on Skilljar. Is that automatically enabled on the new platform?
+
+No. If your company is in Anthropic’s partner program, keep using the partner training site, anthropic-partners.skilljar.com. The anthropic.skilljar.com closure doesn’t affect it.
+
+I have two accounts, one on anthropic.skilljar.com and one on anthropic-partners.skilljar.com. Which one migrated? Can you merge them?
+
+Neither moves over on its own, and we can’t merge them. Import your anthropic.skilljar.com history into a Claude account with the same email as that account before the site closes in early December. The closure doesn’t affect your anthropic-partners.skilljar.com account.
+
+I earned certificates on Skilljar. Where do I find them?
+
+Once you import, each one appears on Your learning as a completion badge with its original date, and you can download or share it. You won’t be able to download certificates from the old site after it closes in early December, so save any PDFs you want before then.
+
+Completion badges
+
+Can I change my name on my completion badge?
+
+Yes. Open the badge on Your learning and choose “Edit name”. Badges are issued automatically with your Claude account name when you pass the final required quiz. If we couldn’t fill it in, you’ll type it when you claim the badge. You can change the name any time, and a rename keeps the badge’s public verification link the same, so anywhere you’ve already shared it keeps working.
+
+I finished every lesson. Where’s my completion badge?
+
+Completion badges are earned by passing the course’s quizzes (every lesson quiz, plus the final assessment where the course has one), rather than by finishing the lessons. Check the course page for any quiz you haven’t passed yet; once the last one is passed, your completion badge is issued immediately. Retakes are unlimited, so you can try again right away.
+
+Can I delete a completion badge?
+
+You can’t delete a completion badge yourself yet. Message support through the support messenger in the corner of the page, and they’ll delete it for you. Deletion is permanent, and the badge’s shared link stops working. Your course progress stays, so you can claim a new badge later, with a new link.
+
+The course ended with a feedback form and I closed the tab without submitting. Did I lose my completion badge?
+
+No. Your completion badge isn’t tied to the feedback form. Completion badges are issued the moment you pass the final required quiz, before any feedback step. Check Your learning: it should already be there. If it isn’t (this can happen when we couldn’t pre-fill your name), open the course and claim it. Your quiz passes are stored, so nothing is lost.
+
+I didn’t pass the final quiz. Do I retake the whole course or just the quiz? Is there a retry limit or timeout?
+
+Just the quiz. Your lesson progress and any quizzes you’ve already passed stay passed, so you only retake the one you missed. There’s no retry limit and no lockout timer; you can retake it immediately.
+
+Does my completion badge expire? Do I need to re-certify when new Claude versions come out?
+
+Completion badges don’t expire. They record that you completed the course as it existed when you took it, with the issue date shown on the verification page. There’s no required re-certification when new Claude versions ship; if a course is substantially updated, you’re welcome to retake it.
+
+This course updated while I was taking it. What does that mean for my completion badge?
+
+Your work isn’t lost. When we update a course, quizzes you’ve already passed stay passed, and a completion badge you’ve already earned stays valid. A course update never takes one back. If you’re mid-course when an update lands, you may occasionally see new or changed lessons or quizzes to finish before your completion badge is issued, but you never start over. And you don’t need to redo a course you’ve already completed unless we announce otherwise.
+
+How do I download or share my completion badge?
+
+Every completion badge you’ve earned is listed on Your learning, at academy.claude.com. Open a badge there and choose Download PDF to save a copy, or Add to LinkedIn to put it on your profile. Each badge also has a public verification link you can share anywhere. Anyone with the link can confirm it’s genuine. There’s nothing to request from support: if you’ve earned it, it’s already on Your learning.
+
+I’m registered for a Claude certification exam. Is that the same as an Academy completion badge?
+
+No. They’re two different things. Academy completion badges are free and are earned by passing a course’s quizzes on academy.claude.com. The Claude certification exams are a separate paid, proctored program: the exams are delivered by Pearson and the credential is issued through Credly, not by Academy. If your question is about scheduling an exam, exam access, a voucher, or a credential you earned by exam, that’s the Pearson/Credly program that’s only available to companies in Anthropic’s partner program through 
+the partner training site
+(opens in new tab)
+
+. If you’re asking how to download or share a completion badge you earned on academy.claude.com, see 
+“How do I download or share my completion badge?”
+ above. You don’t need to contact support.
+
+Courses and progress
+
+How do I withdraw from a course?
+
+On the course page, choose Withdraw from course. The course leaves your enrolled list, and your progress stays, so if you enroll again later you pick up where you left off.
+
+How many times can I retake a quiz?
+
+As many times as you like. There’s no retake limit. Each attempt is graded fresh, and a previous failed attempt never counts against you.
+
+The course is listed as 4 hours but it took me less. Do I still get the completion badge?
+
+Yes. Listed durations are estimates to help you plan. Completion is based on working through the lessons and passing the quizzes, not on time spent, so fast is fine.
+
+A code sample in a lesson doesn’t run (it uses a deprecated flag). Is this course out of date?
+
+Thanks for catching that. Send the course, lesson, and code sample through the support messenger in the corner of the page, and it goes to the content team. You don’t need to wait for a fix to finish the course.
+
+Personal courses and your organization
+
+Why does a course say “Personal”?
+
+If you took a course while signed in with a personal Claude account, and you’re also a member of a Team or Enterprise organization, that course is marked “Personal”. Personal courses don’t count toward your organization.
+
+Can I move a course to my organization?
+
+Yes. On Your learning, a banner shows how many of your courses count elsewhere and offers to move them. Nothing moves until you confirm. The confirmation lists each course, and you choose which ones to move.
+
+What does my organization see after a move?
+
+People who can view your organization’s reports will see the courses you moved, with your progress and dates. Quiz scores are never shared.
+
+Emails and notifications
+
+I’m getting too many emails from Academy. How do I turn them off?
+
+Academy currently sends only one email: a completion notification when you earn a badge. It’s a transactional record of your credential, so there’s no unsubscribe.
+
+Privacy and data
+
+Will my employer see my progress?
+
+Your employer sees your Academy data only if you enrolled in a course or imported your Skilljar history while signed in with your company’s Claude organization, or later moved a course into it. If you did, your organization’s owners and admins, and members whose role includes the Analytics permission, can see those courses, your email address or Claude account ID, your status, and the dates you enrolled, finished, and earned a badge. They never see quiz scores, attempts, or time spent. Courses that count toward your personal account aren’t visible to any organization.
+
+How do I delete my account? Does this delete my data in Skilljar also?
+
+You can delete your Academy data without deleting your Claude account. Click your avatar in the top right, choose Settings, then choose Delete your Academy data. This permanently removes your enrollments, progress, activity, quiz attempts, and completion badges, and shared badge links stop working. Deleting your Claude account also deletes your Academy data, so save any badges you want to keep first. Deleting your Academy data doesn’t change anything on Skilljar.
+
+What happens to what I type in search?
+
+Academy’s search can match pages to the meaning of your search, not only its keywords. When it does, a line under the search box says “Search finds the most relevant pages for what you’re looking for.” Your search text is then sent as you type to Google Cloud, one of Anthropic’s service providers, and the result is used to rank pages. Anthropic doesn’t log your search text or save it to a database. The search service holds recent searches in memory to answer repeats faster. If you don’t see that line while you search, your search text isn’t sent to the search service or to Google Cloud, and search matches keywords only (for example, when you’re signed in, and semantic search isn’t available for your organization). Search also falls back to keywords when the service is unavailable.
+
+Where the search_academy MCP tool ranks by meaning, searches an AI client makes with it go to Google Cloud, regardless of your organization, as the MCP server is unauthenticated. When you ask Claude a question from either the search box or the Ask Claude button in the corner of the page, your question is matched to pages the same way, if semantic search is available for your organization. Anthropic’s service providers are listed at 
+trust.anthropic.com/subprocessors
+(opens in new tab)
+
+.
+
+The “Claude in Academy” setting, for organization admins
+
+What does the “Claude in Academy” setting control?
+
+This setting decides whether members of your organization can use the Claude-powered features in Claude Academy (academy.claude.com): asking Claude questions about what they’re learning, and the lesson tools that turn a passage into a diagram or quiz them on it. When it’s off, members don’t see those features. They can still sign in, take courses, and earn badges. For Team and Enterprise plans, the organization’s Primary owner or an Owner can change the setting at any time in Admin settings > Claude Academy.
+
+Does “Claude in Academy” cost extra or affect our usage?
+
+There’s no separate charge. A question asked in Academy counts toward that member’s normal Claude usage, the same as a chat message. If your organization has usage credits turned on, your existing monthly spend limits apply.
+
+Does “Claude in Academy” add or use up seats?
+
+It doesn’t add or use up seats. Members need to already have a seat in your organization to use these features.
+
+Can admins see what members ask Claude in Academy?
+
+Org reports, including the CSV download, show which courses members enrolled in, their status, their email address or Claude account ID, and the dates they enrolled, finished, and earned a badge. They don’t show what members asked Claude.
+
+What happens to the questions members ask Claude in Academy?
+
+Questions and answers aren’t saved to chat history in Academy or Claude, aren’t added to memory, and aren’t used to train models. They’re retained under your organization’s existing data retention settings.
+
+Org reports, for organization admins
+
+Where do I find Org reports, and who can see the report?
+
+Sign in to Academy with the Claude account you use at work, click your avatar in the top right, and choose Org reports. If claude.ai asks you to approve access to reports, approve it. Everyone who is signed in sees the Org reports menu item, but the report opens for your Claude organization’s Primary owner, Owners, and Admins, and for members whose custom role includes the Analytics permission. Members without access see a message that Org reports aren’t available for their account. If you’re an admin but can’t see your organization’s report, Academy may be connected to a personal account or another organization: see 
+how to switch accounts
+.
+
+Who is included in Org reports?
+
+Current members of your organization, for the courses that count toward it. Each course counts toward the organization the learner was signed in with when the course was first added to their Academy history, either by enrolling in it on Academy or by importing their Skilljar history, whichever happened first, unless the learner later moves it. A course first added in another organization doesn’t appear, even if they finish it after joining yours. A course first added on a personal Claude account doesn’t appear either until the learner moves it to your organization. A moved course keeps its original dates. When someone leaves your organization, their rows disappear from the report, including past completions and badges, and reappear if they rejoin with the same Claude account. If a learner deletes their Academy data or their Claude account, their rows are deleted permanently.
+
+What’s in the Org reports CSV download?
+
+One row per learner per course, with these columns: claude_account_id, learner_email, course_slug, course_title, state (Enrolled, In progress, Completed, Badge earned, or Withdrawn), enrolled_at, completed_at, and badge_issued_at. Times are in UTC. Some rows have an empty learner_email; claude_account_id still identifies them. If a learner’s badge is deleted, their row shows Completed with an empty badge_issued_at until they claim a new badge. The download includes every row that matches the Learners table’s search, course, and status filters, not just the page on screen, so if any filters are set, click “Clear all” first to download every row. The 30 days, 90 days, and All time buttons don’t change it. The report doesn’t include quiz scores, attempts, or time spent.
+
+Content and licensing
+
+I want to partner with you to create content
+
+Thanks for your interest. Anthropic isn’t taking on content partnerships right now because of the number of requests.
+
+Can I license this content / host it internally for my company?
+
+Sometimes. If your company has an Anthropic account team, ask them about content licensing. Licensing is offered only in some cases.
+
+Learning through your company or Anthropic’s partner program
+
+I take courses through my company, or on anthropic-partners.skilljar.com. Does the anthropic.skilljar.com shutdown affect me?
+
+If you learn on anthropic-partners.skilljar.com, the training site for companies in Anthropic’s partner program, this shutdown doesn’t affect that site. If your company set you up on anthropic.skilljar.com, import your own history before it closes in early December (see 
+how to import
+ above). Check with whoever runs your training program about anything else your company arranged there.
+
+Sign-in and access
+
+Migrating from Skilljar
+
+Completion badges
+
+Courses and progress
+
+Personal courses and your organization
+
+Emails and notifications
+
+Privacy and data
+
+The “Claude in Academy” setting, for organization admins
+
+Org reports, for organization admins
+
+Content and licensing
+
+Learning through your company or Anthropic’s partner program
+
+© 
+2026
+ 
+Anthropic PBC
+
+Privacy choices
+
+Privacy policy
+
+Usage policy
+
+

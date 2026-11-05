@@ -1,0 +1,19 @@
+# Credenciales y configuración privada
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencias, cachés y archivos locales
+node_modules/
+dist/
+coverage/
+.cache/
+__pycache__/
+*.log
+.DS_Store
+Thumbs.db

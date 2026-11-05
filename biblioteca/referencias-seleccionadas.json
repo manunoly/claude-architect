@@ -1,0 +1,518 @@
+{
+  "GUIA": {
+    "id": "EXAM-GUIDE",
+    "url": "https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F6nizmqk8tpzpfjvt6qmmav7rh%2Fpublic%2F1783542750%2FClaude+Certified+Architect+%E2%80%93+Foundations+Exam+Guide.pdf",
+    "file": "biblioteca/examen/foundations-exam-guide.pdf",
+    "kind": "pdf",
+    "tags": [
+      "all-domains"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "status": "downloaded",
+    "http_status": 200,
+    "bytes": 628815,
+    "sha256": "9bac07c3e6671e55f6cd0232205340a370e8a13a97e8247237dcb71312bccfc2",
+    "content_type": "application/pdf",
+    "readable_file": "biblioteca/examen/foundations-exam-guide.txt",
+    "pages": 39
+  },
+  "API": {
+    "id": "API-a89158ca8c",
+    "url": "https://platform.claude.com/docs/en/intro.md",
+    "file": "biblioteca/api/intro.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/intro.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 5835,
+    "sha256": "9e44307e25cc91083f48c1df173127f08e112cce2a4bd9107e8868022ad4e323"
+  },
+  "SDK": {
+    "id": "SDK-TS",
+    "url": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/README.md",
+    "file": "biblioteca/typescript/anthropic-sdk-readme.md",
+    "kind": "markdown",
+    "tags": [
+      "M0",
+      "D2"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/README.md",
+    "content_type": "text/plain; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 2138,
+    "sha256": "5a34e8cd345a64df630c1484819cfc68cef61b5fbffb1005a1e6e73a2780a650"
+  },
+  "PROMPTS": {
+    "id": "API-e97bcd808b",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview.md",
+    "file": "biblioteca/api/build-with-claude/prompt-engineering/overview.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 2814,
+    "sha256": "0dcdf2155778c9ace8ab0f2db4a9515c0a0df9b04ee32f82108cd93a6b42e318"
+  },
+  "STRUCTURED": {
+    "id": "API-e8c7e01329",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs.md",
+    "file": "biblioteca/api/build-with-claude/structured-outputs.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 106038,
+    "sha256": "a97a39ec51ed00d9467f7e7a0047ce12f13b0dccb75aef0655ff03be57af6781"
+  },
+  "TOOLS": {
+    "id": "API-e4630ca170",
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools.md",
+    "file": "biblioteca/api/agents-and-tools/tool-use/define-tools.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 40792,
+    "sha256": "4f21fd1dc5f893e92fc54abe5c696b91fdf75b1d6c3629556da26b5ea5d2722e"
+  },
+  "TOOL-RESULTS": {
+    "id": "API-b1f8a207c3",
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls.md",
+    "file": "biblioteca/api/agents-and-tools/tool-use/handle-tool-calls.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 13518,
+    "sha256": "8ca85717b424fbac3c6b0ad97c47ce2c6a940712b84c2fd47a0efc5c45e67dea"
+  },
+  "BATCH": {
+    "id": "API-a204a59d72",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing.md",
+    "file": "biblioteca/api/build-with-claude/batch-processing.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 81081,
+    "sha256": "5f6c0b848846775fab267d626bcad75dd1cde0be3e9b5cca130d5ddfdff29685"
+  },
+  "MCP": {
+    "id": "MCP-183a470bd9",
+    "url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+    "file": "biblioteca/mcp/docs/2026-07-28/learn/architecture.md",
+    "kind": "markdown",
+    "tags": [
+      "D2"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 31562,
+    "sha256": "c28e5ef3dd7c4d9195c91cfded6e1e28056dbbedc23a2460a03cec17a94ac1e6"
+  },
+  "AGENTS": {
+    "id": "ENG-AGENTS",
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "file": "biblioteca/engineering/building-effective-agents.html",
+    "kind": "html",
+    "tags": [
+      "D1"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://www.anthropic.com/research/building-effective-agents",
+    "content_type": "text/html; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 220563,
+    "sha256": "a3e8cc0175ee0f3295d0e7723f16570c73a166276784b70664ceed0f640d91a1",
+    "readable_file": "biblioteca/engineering/building-effective-agents.txt"
+  },
+  "CONTEXT": {
+    "id": "ENG-CONTEXT",
+    "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "file": "biblioteca/engineering/effective-context-engineering.html",
+    "kind": "html",
+    "tags": [
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "content_type": "text/html; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 206373,
+    "sha256": "9ec96f88a5cdb0aa9f1ca5b2ebff32f6fa51309ddb6a58cd4be2035f51dc5b1c",
+    "readable_file": "biblioteca/engineering/effective-context-engineering.txt"
+  },
+  "EVALS": {
+    "id": "ENG-EVALS",
+    "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+    "file": "biblioteca/engineering/demystifying-evals.html",
+    "kind": "html",
+    "tags": [
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+    "content_type": "text/html; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 313246,
+    "sha256": "8bad9968a3924a59423530f27f83a83d1cfb013fa496219ff3d612c0f1c0271a",
+    "readable_file": "biblioteca/engineering/demystifying-evals.txt"
+  },
+  "MEMORY": {
+    "id": "CODE-f437eda08c",
+    "url": "https://code.claude.com/docs/en/memory.md",
+    "file": "biblioteca/code/memory.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/memory.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 55364,
+    "sha256": "275fe39e8501741ad308ab8ecd4552327cf34e53654841d7a121de80fbe6b595"
+  },
+  "RULES": {
+    "id": "CODE-f437eda08c",
+    "url": "https://code.claude.com/docs/en/memory.md",
+    "file": "biblioteca/code/memory.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/memory.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 55364,
+    "sha256": "275fe39e8501741ad308ab8ecd4552327cf34e53654841d7a121de80fbe6b595"
+  },
+  "SKILLS": {
+    "id": "CODE-194f0e2835",
+    "url": "https://code.claude.com/docs/en/skills.md",
+    "file": "biblioteca/code/skills.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/skills.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 119044,
+    "sha256": "977bb9f8d6a004c37e6731afd94bc3ad7bba1e64a2b2d7e7f22df910d4b06287"
+  },
+  "SUBAGENTS": {
+    "id": "CODE-783f5b2354",
+    "url": "https://code.claude.com/docs/en/sub-agents.md",
+    "file": "biblioteca/code/sub-agents.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/sub-agents.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 116728,
+    "sha256": "db8a532d4c04d8cec27622b3afd68f86f8d96efa121f4b498dcb430e2bc543b8"
+  },
+  "HOOKS": {
+    "id": "CODE-999110e1f6",
+    "url": "https://code.claude.com/docs/en/hooks.md",
+    "file": "biblioteca/code/hooks.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/hooks.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 286102,
+    "sha256": "54d66bf143d888ac0c554becf7cb2762d8265f412a3dc7fde4908e8d1499bcfc"
+  },
+  "SETTINGS": {
+    "id": "CODE-9401e15702",
+    "url": "https://code.claude.com/docs/en/settings.md",
+    "file": "biblioteca/code/settings.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/settings.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 45734,
+    "sha256": "448f49ae3a98bdf9510dd6b2f609ff34bf1d2811e25e949d3b471dcd635c7433"
+  },
+  "MCP-CODE": {
+    "id": "CODE-7bb9c49142",
+    "url": "https://code.claude.com/docs/en/mcp.md",
+    "file": "biblioteca/code/mcp.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/mcp.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 155726,
+    "sha256": "4b3c2237229b454601119d2fd5d44228089ec3436b78edb395d357fc2bfe44d1"
+  },
+  "CLI": {
+    "id": "CODE-bad94f575e",
+    "url": "https://code.claude.com/docs/en/cli-reference.md",
+    "file": "biblioteca/code/cli-reference.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/cli-reference.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 51772,
+    "sha256": "1d7b735d97fa016124d3fd336223c8c17d463ea4a7dd1dfda48a772d8ae0073a"
+  },
+  "SESSIONS": {
+    "id": "CODE-a6541e0e90",
+    "url": "https://code.claude.com/docs/en/sessions.md",
+    "file": "biblioteca/code/sessions.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/sessions.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 34259,
+    "sha256": "a1883e35d26fc7bd8b0f0e76a92d9e5a3dfa32b80426ee9d6a5adc58aaf9d04c"
+  },
+  "SDK-AGENT": {
+    "id": "CODE-8cbf1444c8",
+    "url": "https://code.claude.com/docs/en/agent-sdk/overview.md",
+    "file": "biblioteca/code/agent-sdk/overview.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/agent-sdk/overview.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 7382,
+    "sha256": "6bf994e5897cbf228f19e17b177036fe23cdbd02b790944f72a090f07e80258d"
+  },
+  "SDK-SUBAGENTS": {
+    "id": "CODE-e68a9599ae",
+    "url": "https://code.claude.com/docs/en/agent-sdk/subagents.md",
+    "file": "biblioteca/code/agent-sdk/subagents.md",
+    "kind": "markdown",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://code.claude.com/docs/en/agent-sdk/subagents.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 42519,
+    "sha256": "9db0458e43e56fd472b94af95e6eb9c1b00052a250eb91bc540da930b77cc4cd"
+  },
+  "CACHE": {
+    "id": "API-160e2c7c20",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching.md",
+    "file": "biblioteca/api/build-with-claude/prompt-caching.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 166126,
+    "sha256": "aee2de4eb8dbb3102f9164831482d848afc9621ca0a19bbd4f4fd11f46b2d3d1"
+  },
+  "WINDOW": {
+    "id": "API-465b42d546",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows.md",
+    "file": "biblioteca/api/build-with-claude/context-windows.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/build-with-claude/context-windows.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 16251,
+    "sha256": "79125a3b3ca7e2f069ec46a2b5403315669e80a133f2ab6cab8bf737923db2e6"
+  },
+  "GUARDRAILS": {
+    "id": "API-3e5364801a",
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks.md",
+    "file": "biblioteca/api/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks.md",
+    "kind": "markdown",
+    "tags": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "status": "downloaded",
+    "bytes": 12569,
+    "sha256": "6cc36ea7cd1429c61fae7b5fc922ef2b0a5da82f1ce631f04b806c7c4c6e596e"
+  },
+  "COURSE-API": {
+    "id": "COURSE-API",
+    "url": "https://academy.claude.com/courses/building-with-the-claude-api",
+    "file": "biblioteca/cursos/building-with-the-claude-api.html",
+    "kind": "course-page",
+    "tags": [
+      "all-domains"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://academy.claude.com/courses/building-with-the-claude-api",
+    "content_type": "text/html",
+    "status": "downloaded",
+    "bytes": 118474,
+    "sha256": "383989af956fecd187f57fe9e9e5590b476bff375e4dae16c1955ee582451693",
+    "readable_file": "biblioteca/cursos/building-with-the-claude-api.txt"
+  },
+  "COURSE-MCP": {
+    "id": "COURSE-MCP",
+    "url": "https://academy.claude.com/courses/introduction-to-model-context-protocol",
+    "file": "biblioteca/cursos/introduction-to-model-context-protocol.html",
+    "kind": "course-page",
+    "tags": [
+      "D2"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://academy.claude.com/courses/introduction-to-model-context-protocol",
+    "content_type": "text/html",
+    "status": "downloaded",
+    "bytes": 82740,
+    "sha256": "0de7310ccbdbb8d71fa6fa549dd236979d60b55357cda9f8ae1810f76a65ed39",
+    "readable_file": "biblioteca/cursos/introduction-to-model-context-protocol.txt"
+  },
+  "COURSE-CODE": {
+    "id": "COURSE-CODE",
+    "url": "https://academy.claude.com/courses/claude-code-in-action",
+    "file": "biblioteca/cursos/claude-code-in-action.html",
+    "kind": "course-page",
+    "tags": [
+      "D3"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://academy.claude.com/courses/claude-code-in-action",
+    "content_type": "text/html",
+    "status": "downloaded",
+    "bytes": 75158,
+    "sha256": "ab040501518ccfa947bce0c2c6513772e87087208c95e3b37d187c8a0b745b54",
+    "readable_file": "biblioteca/cursos/claude-code-in-action.txt"
+  },
+  "COURSE-EVALS": {
+    "id": "COURSE-EVALS",
+    "url": "https://academy.claude.com/courses/introduction-to-evals",
+    "file": "biblioteca/cursos/introduction-to-evals.html",
+    "kind": "course-page",
+    "tags": [
+      "D5"
+    ],
+    "fetched_at_utc": "2026-11-05T17:14:22.079459+00:00",
+    "http_status": 200,
+    "final_url": "https://academy.claude.com/courses/introduction-to-evals",
+    "content_type": "text/html",
+    "status": "downloaded",
+    "bytes": 75216,
+    "sha256": "d57a99b1c471ccc698c2cc79e61ee5af36a29ade23396f17284ac3fcc5292c20",
+    "readable_file": "biblioteca/cursos/introduction-to-evals.txt"
+  }
+}

@@ -1,0 +1,403 @@
+Building with the Claude API · Claude Academy
+
+Claude Academy
+
+Explore
+
+
+Resources
+
+
+
+
+Search
+
+Loading
+
+
+
+Explore
+
+
+Resources
+
+
+Courses
+
+
+
+
+
+Academy
+
+/
+
+Courses
+
+
+
+Courses
+
+Building with the Claude API
+
+The full spectrum of working with Anthropic models using the Claude API: prompting, tool use, RAG, agents, MCP, and production patterns.
+
+
+
+67 lessons
+
+
+
+9 hr
+
+
+
+8 quizzes
+
+
+
+Completion badge
+
+Start course
+
+
+Sign in to save progress
+
+67 lessons · 8 quizzes
+
+Building with the Claude API
+
+
+
+What you’ll learn
+
+By the end of this course, you’ll be able to
+
+
+
+Set up and authenticate with the Anthropic API, including API key management and request configuration
+
+
+
+Implement single and multi-turn conversations with proper message formatting and context handling
+
+
+
+Configure system prompts and control model behavior using temperature, response streaming, and structured output formats
+
+
+
+Design and execute prompt evaluation workflows with test dataset generation and automated grading systems
+
+
+
+Apply prompt engineering techniques including XML tag structuring, example-based learning, and clear directive formulation
+
+
+
+Integrate Claude's tool use capabilities to extend functionality with custom tools, batch operations, and web search
+
+
+
+Build retrieval-augmented generation (RAG) systems with text chunking, embeddings, BM25 search, and contextual retrieval
+
+
+
+Utilize Claude's extended features including extended thinking mode, image analysis, PDF processing, and citation generation
+
+
+
+Implement prompt caching strategies to optimize API usage and reduce latency
+
+
+
+Develop Model Context Protocol (MCP) servers and clients for standardized tool and resource integration
+
+
+
+Deploy Anthropic Apps including Claude Code for automated development tasks and Computer Use for UI automation
+
+
+
+Architect agent-based systems with parallelization, chaining, and routing workflows
+
+Who it’s for
+
+Software engineers who need to integrate Claude into production applications. Whether you're building chatbots, automation tools, or AI-powered features, this course covers the implementation patterns you'll need.
+
+Before you start
+
+Proficiency in Python programming
+
+Basic knowledge of handling JSON data
+
+Access to an Anthropic API key
+
+This course provides comprehensive coverage of the Claude API, from basic usage through advanced agent architectures. You'll learn to integrate Claude into applications, implement tool calling, build RAG pipelines, and design both deterministic workflows and flexible agent systems.
+
+Inside the course
+
+Accessing Claude with the API
+
+9
+ 
+lessons
+
+Start here for the fundamentals. Covers API authentication, basic requests, conversation management, system prompts, and structured output generation.
+
+Prompt engineering techniques
+
+6
+ 
+lessons
+
+Learn to write prompts that actually work. Focuses on prompting strategies, evaluation frameworks, and systematic testing approaches.
+
+Tool use with Claude
+
+13
+ 
+lessons
+
+Extend Claude with custom tools and functions. Build apps with function calling, multi-turn tool interactions, batch tool calling, and leverage built-in utilities.
+
+RAG and Agentic Search
+
+7
+ 
+lessons
+
+Implementation guide for production RAG systems. Covers text chunking, embeddings, hybrid search with BM25, multi-index architectures, reranking, and contextual retrieval.
+
+Model Context Protocol
+
+11
+ 
+lessons
+
+The protocol for building modular AI applications. Define custom tools and resources, implement MCP servers and clients, handle the full integration lifecycle.
+
+Anthropic apps - Claude Code and computer use
+
+4
+ 
+lessons
+
+Two powerful Anthropic tools in action. Claude Code accelerates development workflows, Computer Use automates UI interactions. Includes MCP integration patterns.
+
+Agents and workflows
+
+8
+ 
+lessons
+
+Architecture patterns for autonomous AI systems. Understand parallel execution, operation chaining, conditional routing, and effective debugging strategies.
+
+Accessing Claude with the API
+
+Accessing the API
+
+Getting an API key
+
+Making a request
+
+Multi-Turn conversations
+
+System prompts
+
+Temperature
+
+Response streaming
+
+Structured data
+
+Quiz on accessing Claude with the API
+
+
+Quiz
+
+Prompt evaluation
+
+Prompt evaluation
+
+A typical eval workflow
+
+Generating test datasets
+
+Running the eval
+
+Model based grading
+
+Code based grading
+
+Quiz on prompt evaluation
+
+
+Quiz
+
+Prompt engineering techniques
+
+Prompt engineering
+
+Being clear and direct
+
+Being specific
+
+Structure with XML tags
+
+Providing examples
+
+Quiz on prompt engineering techniques
+
+
+Quiz
+
+Tool use with Claude
+
+Introducing tool use
+
+Project overview
+
+Tool functions
+
+Tool schemas
+
+Handling message blocks
+
+Sending tool results
+
+Multi-turn conversations with tools
+
+Implementing multiple turns
+
+Using multiple tools
+
+Fine grained tool calling
+
+The text edit tool
+
+The web search tool
+
+Quiz on tool use with Claude
+
+
+Quiz
+
+RAG and Agentic Search
+
+Introducing Retrieval Augmented Generation
+
+Text chunking strategies
+
+Text embeddings
+
+The full RAG flow
+
+Implementing the RAG flow
+
+BM25 lexical search
+
+A Multi-Index RAG pipeline
+
+Features of Claude
+
+Extended thinking
+
+Image support
+
+PDF support
+
+Citations
+
+Prompt caching
+
+Rules of prompt caching
+
+Prompt caching in action
+
+Code execution and the Files API
+
+Quiz on features of Claude
+
+
+Quiz
+
+Model Context Protocol
+
+Introducing MCP
+
+MCP clients
+
+Project setup
+
+Defining tools with MCP
+
+The server inspector
+
+Implementing a client
+
+Defining resources
+
+Accessing resources
+
+Defining prompts
+
+Prompts in the client
+
+Quiz on Model Context Protocol
+
+
+Quiz
+
+Anthropic apps - Claude Code and computer use
+
+Anthropic apps: Claude Code and computer use
+
+Claude Code setup
+
+Claude Code in action
+
+Adding MCP servers to Claude Code
+
+Agents and workflows
+
+Agents and workflows
+
+Parallelization workflows
+
+Chaining workflows
+
+Routing workflows
+
+Agents and tools
+
+Environment inspection
+
+Workflows vs agents
+
+Quiz on Agents and Workflows
+
+
+Quiz
+
+Final assessment
+
+Final Assessment
+
+
+Quiz
+
+Completion badge
+
+© 
+2026
+ 
+Anthropic PBC
+
+Privacy choices
+
+Privacy policy
+
+Usage policy
+
+

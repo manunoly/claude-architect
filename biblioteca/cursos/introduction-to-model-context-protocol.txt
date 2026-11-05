@@ -1,0 +1,208 @@
+Introduction to Model Context Protocol · Claude Academy
+
+Claude Academy
+
+Explore
+
+
+Resources
+
+
+
+
+Search
+
+Loading
+
+
+
+Explore
+
+
+Resources
+
+
+Courses
+
+
+
+
+
+Academy
+
+/
+
+Courses
+
+
+
+Courses
+
+Introduction to Model Context Protocol
+
+Build MCP servers and clients from scratch with the Python SDK, covering the three core primitives—tools, resources, and prompts—that connect Claude to external services.
+
+
+
+10 lessons
+
+
+
+1 hr
+
+
+
+1 quiz
+
+
+
+Completion badge
+
+Start course
+
+
+Sign in to save progress
+
+10 lessons · 1 quiz
+
+Introduction to Model Context Protocol
+
+
+
+What you’ll learn
+
+By the end of this course, you’ll be able to
+
+
+
+Understand MCP architecture and how it shifts tool definition and execution burden from your server to specialized MCP servers
+
+
+
+Learn about MCP's transport-agnostic communication system and the message types used between clients and servers
+
+
+
+Explore the complete request-response flow from user queries through MCP clients to external services and back to Claude
+
+
+
+Build MCP servers using the Python SDK with decorators to define tools instead of writing JSON schemas manually
+
+
+
+Implement document management functionality with tools for reading and editing documents using Field descriptions and type hints
+
+
+
+Use the built-in MCP Server Inspector to test and debug your server functionality in a browser-based interface
+
+
+
+Define resources for exposing read-only data, including both direct resources with static URIs and templated resources with parameters
+
+
+
+Implement resource reading functionality in clients with proper MIME type handling for JSON and text content
+
+
+
+Build prompts that provide pre-crafted, high-quality instructions for common workflows like document formatting
+
+
+
+Understand when to use each MCP primitive: tools (model-controlled), resources (app-controlled), and prompts (user-controlled)
+
+
+
+Examine practical integration patterns including autocomplete functionality and context injection for AI conversations
+
+Who it’s for
+
+Engineers who want to integrate Claude with external tools and services without writing tons of boilerplate integration code
+
+Before you start
+
+Basic Python programming experience
+
+Understanding of async/await patterns
+
+Familiarity with API concepts
+
+An Anthropic API key, for the chat application you run in later lessons
+
+This course covers MCP, a protocol for connecting Claude to external services and data sources without manually writing tool schemas. You'll learn to build both MCP servers that expose tools, resources, and prompts, and MCP clients that consume them. The course includes a hands-on project where you implement a document management system using MCP.
+
+Inside the course
+
+Introduction
+
+2
+ 
+lessons
+
+Start with understanding MCP's architecture and why it exists.
+
+Hands-on with MCP servers
+
+2
+ 
+lessons
+
+Build your first MCP server with tools using the Python SDK, then test it with the built-in inspector.
+
+Connecting with MCP clients
+
+5
+ 
+lessons
+
+Build the client side to communicate with MCP servers. Implement resources for direct data access and prompts for pre-built instructions. See how everything connects in a complete application flow.
+
+Introduction
+
+Introducing MCP
+
+MCP clients
+
+Hands-on with MCP servers
+
+Defining tools with MCP
+
+The server inspector
+
+Connecting with MCP clients
+
+Implementing a client
+
+Defining resources
+
+Accessing resources
+
+Defining prompts
+
+Prompts in the client
+
+Assessment and wrap Up
+
+Final assessment on MCP
+
+
+Quiz
+
+MCP review
+
+Completion badge
+
+© 
+2026
+ 
+Anthropic PBC
+
+Privacy choices
+
+Privacy policy
+
+Usage policy
+
+

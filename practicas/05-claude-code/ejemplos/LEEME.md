@@ -1,0 +1,3 @@
+# Ejemplos de lectura, sin activación automática
+
+Los archivos .example representan ámbitos y convenciones para estudiar. No se han instalado como configuración del proyecto ni del usuario. Adaptar rutas y verificar la documentación de la versión antes de convertirlos en configuración real. La regla paths se ilustra en un archivo de texto; no se carga por sí sola. allowed-tools solo preaprueba; el ejemplo disallowed-tools excluye algunas herramientas comunes, pero no constituye una lista exhaustiva de toda posible acción o herramienta MCP. Una configuración realmente de solo lectura exige revisar el pool y las reglas de permisos de la versión.

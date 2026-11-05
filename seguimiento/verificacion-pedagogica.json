@@ -1,0 +1,19 @@
+{
+  "hours_from_roadmap": 60.0,
+  "sessions_checked": 20,
+  "hours_by_week": {
+    "1": 15.0,
+    "2": 15.0,
+    "3": 15.0,
+    "4": 15.0
+  },
+  "bank_items": 60,
+  "control_items": 60,
+  "english_closures": 18,
+  "strengthened_control_items": 20,
+  "keys_recomputed_from_permuted_options": 60,
+  "exam_fields_removed_from_learning_bank": true,
+  "authorization_mutation_caught": true,
+  "mutation_source": "work/project-qa/mutated-auth.ts",
+  "note": "The intentionally faulty copy is outside the delivered project; original source is unchanged."
+}

@@ -1,0 +1,38 @@
+{
+  "strengthened_items": 20,
+  "exam_fields_in_learning_bank": false,
+  "old_pattern_correct": 10,
+  "total": 60,
+  "single_answer_distribution": {
+    "A": 14,
+    "D": 13,
+    "B": 14,
+    "C": 13
+  },
+  "multiple_answer_pairs": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "A",
+      "C"
+    ],
+    [
+      "B",
+      "C"
+    ],
+    [
+      "C",
+      "D"
+    ],
+    [
+      "A",
+      "D"
+    ],
+    [
+      "B",
+      "D"
+    ]
+  ]
+}
